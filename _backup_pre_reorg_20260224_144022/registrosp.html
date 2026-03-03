@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>BACKOFFICE CAMPO ANDINO</title>
+      
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/22.2.5/css/dx.darkmoon.css" />
+    <script src="https://cdn3.devexpress.com/jslib/22.2.6/js/jquery.min.js"></script>
+    <script src="dx.all.js"></script>
+    <script src="registrosp.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <style>
+    .estado-abierto { color: #1fa900 !important; }
+    .estado-cerrado { color: #e53935 !important; }
+    </style>
+  </head>
+  <body class="dx-viewport">
+
+    <!-- cabecera para el titulo -->
+    <header id="main-header">		
+      <p id="titulocabecera">
+        CONTROL PARADAS DE MÁQUINAS -
+        <span class="perfil-pequeno">PERFIL REGISTRADOR</span>
+      </p>
+    </header>
+
+  <!-- seccion botones -->
+    <div class="button-container">   
+      <div id="btnNuevo"></div>        
+      <div id="btnAceptar"></div>           
+      <div id="btnRegistros"></div> 
+      <div id="btnCerrarSesion"></div> 
+      
+    </div>
+    <div class="demo-container">
+      <div id="form">
+        <div class="dx-fieldset">
+
+          <div class="dx-field">
+            <div class="dx-field-label">Sede:</div>
+            <div class="dx-field-value">
+              <div id="cmbSede"></div>
+            </div>
+          </div>
+
+          <div class="dx-field">
+            <div class="dx-field-label">Fecha:</div>
+            <div class="dx-field-value">
+              <div id="dpFecha"></div>
+            </div>
+          </div>
+
+          <div class="dx-field">
+            <div class="dx-field-label">Turno:</div>
+            <div class="dx-field-value">
+              <div id="cmbTurno"></div>
+            </div>
+          </div>
+
+          <div class="dx-field">
+            <div class="dx-field-label">Hora Inicio de Parada:</div>
+            <div class="dx-field-value">
+              <div id="tpHoraInicio"></div>
+            </div>
+          </div>
+
+          <div class="dx-field">
+            <div class="dx-field-label">Máquina:</div>
+            <div class="dx-field-value">
+              <div id="cmbMaquinaArea"></div>
+            </div>
+          </div>
+
+          <div class="dx-field">
+            <div class="dx-field-label">Motivo:</div>
+            <div class="dx-field-value">
+              <div id="cmbMotivo"></div>
+            </div>
+          </div>
+
+          <div class="dx-field">
+            <div class="dx-field-label">Hora Fin de Parada:</div>
+            <div class="dx-field-value">
+              <div id="tpHoraFin"></div>
+            </div>
+          </div>  
+       
+          <div class="dx-field">
+            <div class="dx-field-label">Total Horas Paradas:</div>
+            <div class="dx-field-value">
+              <div id="txtTotalHoras"></div>
+            </div>
+          </div>  
+
+        </div>
+      </div>
+    </div>
+  
+
+    <!-- modal -->
+    <div class="demo-container">
+      <div id="popupDetalle">
+        <div id="detalleGrid" style="width:1000px;"></div>
+      </div>
+    </div>
+
+    <!-- dwlista -->
+    <div class="demo-container">      
+      <div id="dw_lista"></div>
+    </div>
+
+    <div id="lblUsuario"></div>
+
+    <br>
+
+    <footer id="main-footer" class="footer-moderno">
+      <div class="footer-linea">© 2025 Campo Andino. Todos los derechos reservados.</div>
+      <div class="footer-linea">Desarrollado por SCM</div>
+    </footer>
+
+  </body>
+</html>

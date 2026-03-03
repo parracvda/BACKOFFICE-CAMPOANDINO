@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CONTROL</title>
+      
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/22.2.5/css/dx.darkmoon.css" />
+    <script src="https://cdn3.devexpress.com/jslib/22.2.6/js/jquery.min.js"></script>
+    <script src="dx.all.js"></script>
+    <script src="resumen.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <style>
+    .estado-abierto { color: #1fa900 !important; }
+    .estado-cerrado { color: #e53935 !important; }
+    </style>
+  </head>
+  <body class="dx-viewport">
+
+    <!-- cabecera para el titulo -->
+    <header id="main-header">		
+      <p id="titulocabecera">
+        CONTROL PARADAS DE MÁQUINAS -
+        <span class="perfil-pequeno">REPORTE</span>
+      </p>
+    </header>
+
+  <!-- seccion botones -->
+    <div class="button-container">   
+      <!-- <div id="btnNuevo"></div>        
+      <div id="btnAceptar"></div>           
+      <div id="btnRegistros"></div>  -->
+      <div id="btnPanel"></div> 
+      <div id="btnCerrarSesion"></div> 
+      
+    </div>
+    <div class="demo-container">
+      <div id="form">
+        <div class="dx-fieldset">
+
+          
+
+        </div>
+      </div>
+    </div>
+  
+
+    <!-- modal -->
+    <div class="demo-container">
+      <div id="popupDetalle">
+        <div id="detalleGrid" style="margin: 24px 0;"></div>
+      </div>
+    </div>
+
+    <!-- dwlista -->
+    <div class="demo-container">
+      <div id="dw_lista"></div>
+    </div>
+
+    <div id="lblUsuario"></div>
+
+    <br>
+
+    <footer id="main-footer" class="footer-moderno">
+      <div class="footer-linea">© 2025 Campo Andino. Todos los derechos reservados.</div>
+      <div class="footer-linea">Desarrollado por SCM</div>
+    </footer>
+
+  </body>
+</html>

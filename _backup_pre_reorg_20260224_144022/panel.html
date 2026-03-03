@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>BACKOFFICE CAMPO ANDINO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap">
+  <link rel="stylesheet" href="stylespanel.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn3.devexpress.com/jslib/22.2.6/js/jquery.min.js"></script>
+  <script src="https://cdn3.devexpress.com/jslib/22.2.6/js/dx.all.js"></script>
+  <script src="panel.js"></script>
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(120deg, #e0fcf8 0%, #f8fafd 100%);
+      min-height: 100vh;
+      margin: 0;
+    }
+    .main-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 32px 0 32px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .main-panel-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1fa9a0;
+      letter-spacing: 1px;
+    }
+    .turno-status-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      white-space: nowrap;
+    }
+
+    /* Forzar que los hijos no colapsen ni hagan wrap */
+    .turno-status-container > * {
+      flex: 0 0 auto;
+    }
+
+    .turno-status-label { white-space: nowrap; margin-right: 6px; font-weight:600; }
+    .turno-status-label {
+      font-weight: 600;
+      color: #555;
+    }
+    .turno-badge {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    .turno-badge.abierto {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .turno-badge.cerrado {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    .turno-badge.none {
+      background: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+    }
+    .btn-cerrar-turno {
+      background: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-size: 0.95rem;
+      vertical-align: middle;
+      white-space: nowrap;
+      display: inline-block;
+      margin: 0;
+    }
+
+    /* Si hay reglas globales que convierten botones en 100% ancho, sobreescribir en este contenedor */
+    .turno-status-container .btn-cerrar-turno {
+      width: auto !important;
+      max-width: none !important;
+      display: inline-block !important;
+    }
+
+    /* seguridad adicional: si existe un style="display:block" en el botón, sobrescribirlo vía JS al cargar */
+    .btn-cerrar-turno:hover {
+      background: #c0392b;
+    }
+    .btn-cerrar-turno:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .user-session-panel {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .user-label {
+      color: #1fa9a0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      background: #e0fcf8; /* Fondo celeste suave, no blanco */
+      border-radius: 8px;
+      padding: 4px 14px;
+      box-shadow: 0 1px 4px rgba(31,169,160,0.07);
+      margin-right: 0;
+      border: 1px solid #1fa9a0;
+      display: flex;
+      align-items: center;
+    }
+    .logout-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.7rem;
+      color: #1fa9a0; /* Color visible y acorde al tema */
+      transition: color 0.2s;
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+    }
+    .logout-btn:hover {
+      color: #e74c3c;
+    }
+    @media (max-width: 700px) {
+      .user-label {
+          font-size: 1rem;
+          padding: 3px 10px;
+          background: #e0fcf8;
+      }
+      .logout-btn {
+          font-size: 1.5rem;
+          margin-left: 4px;
+      }
+    }
+    .panel-saludo {
+      display: none;
+    }
+    .sistemas-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: flex-start;
+      align-items: flex-start; /* evitar que las tarjetas se estiren al mismo alto */
+      margin: 0 32px;
+    }
+    .sistema-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(31,169,160,0.08);
+      padding: 32px 28px 24px 28px;
+      min-width: 260px;
+      max-width: 320px;
+      flex: 1 1 260px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      box-sizing: border-box;
+    }
+    .sistema-card:hover {
+      box-shadow: 0 4px 24px rgba(31,169,160,0.18);
+      transform: translateY(-4px) scale(1.02);
+    }
+    .sistema-card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1fa9a0;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .sistema-card-desc {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+    /* Forzar que las opciones estén ocultas por defecto y solo se muestren
+       cuando la tarjeta tenga la clase active. Usar !important para prevenir
+       interferencias de estilos inline o librerías externas. */
+    .sistema-opciones {
+      width: 100%;
+      margin-top: 8px;
+      display: none !important;
+      flex-direction: column;
+      gap: 10px;
+      animation: fadeIn 0.3s;
+    }
+    .sistema-card.active .sistema-opciones {
+      display: flex !important;
+    }
+    /* Regla robusta: solo la tarjeta indicada por data-active-card en el contenedor
+       puede mostrar sus opciones. Esto evita que reglas externas activen varias.
+    */
+    .sistemas-grid[data-active-card] .sistema-opciones { display: none !important; }
+    .sistemas-grid[data-active-card="cardHorasParadas"] #cardHorasParadas .sistema-opciones,
+    .sistemas-grid[data-active-card="cardRequerimientos"] #cardRequerimientos .sistema-opciones,
+    .sistemas-grid[data-active-card="cardTratamiento"] #cardTratamiento .sistema-opciones,
+    .sistemas-grid[data-active-card="cardMantenimiento"] #cardMantenimiento .sistema-opciones {
+      display: flex !important;
+    }
+    .sistema-opcion-btn {
+      background: #1fa9a0;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 0;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+      margin-bottom: 0;
+    }
+    .sistema-opcion-btn:hover {
+      background: #17857e;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 700px) {
+      .main-panel-header, .panel-saludo, .sistemas-grid {
+        margin: 0 8px;
+        padding: 0 8px;
+      }
+      .sistemas-grid {
+        flex-direction: column;
+        gap: 18px;
+      }
+      .sistema-card {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 24px 8px 18px 8px;
+        box-sizing: border-box;
+      }
+      .user-label {
+        font-size: 1rem;
+        padding: 3px 10px;
+      }
+    }
+    /* Solución visual para usuario y botón de cerrar sesión */
+    .user-label {
+      background: #1fa9a0 !important;
+      color: #fff !important;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      padding: 4px 14px;
+      box-shadow: 0 1px 4px rgba(31,169,160,0.07);
+      border: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .logout-btn .dx-icon {
+      color: #fff !important;
+      fill: #fff !important;
+      font-size: 1.7rem;
+    }
+
+    .logout-btn:hover .dx-icon {
+      color: #e74c3c !important;
+      fill: #e74c3c !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-panel-header">
+    <div class="main-panel-title">Panel Principal</div>
+    
+    <!-- Indicador de Estado de Turno -->
+    <div class="turno-status-container" id="turnoStatusContainer" style="display:none;">
+      <span class="turno-status-label">Turno:</span>
+      <span class="turno-badge" id="turnoStatusBadge">-</span>
+      <button class="btn-cerrar-turno" id="btnCerrarTurno" style="display:none;">
+        Cerrar Turno
+      </button>
+    </div>
+    <!-- Área de depuración para estado de turno (visible temporalmente si hay error) -->
+    <div id="turnoDebug" style="display:none; color:#b00; font-weight:600; margin-left:12px;"></div>
+    
+    <div class="user-session-panel">
+      <span class="user-label" id="lblUsuario"></span>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <button class="logout-btn" id="btnCerrarSesion" title="Cerrar sesión">
+        <i class="fa fa-sign-out-alt"></i>
+      </button>
+    </div>
+
+    <script>
+      // Forzar redirección del botón Aprobación Requerimientos para cualquier usuario
+      document.addEventListener('DOMContentLoaded', function(){
+        var btnApr = document.getElementById('btnAprobacionRequerimientos');
+        if (!btnApr) return;
+        try {
+          // asegurar visibilidad por encima de otros elementos
+          btnApr.style.position = btnApr.style.position || 'relative';
+          btnApr.style.zIndex = '10000';
+          // remover listeners previos clonando el nodo
+          var newBtn = btnApr.cloneNode(true);
+          btnApr.parentNode.replaceChild(newBtn, btnApr);
+          newBtn.addEventListener('click', function(e){
+            e.stopPropagation();
+            e.preventDefault();
+            // redirigir a aprobaciones
+            window.location.assign('aprobaciones_v2.php');
+          });
+        } catch(e) { console.warn('No se pudo forzar comportamiento btnAprobacionRequerimientos', e); }
+      });
+    </script>
+  </div>
+  <br>
+  <div class="sistemas-grid">
+    <div class="sistema-card" id="cardHorasParadas" style="display:none;">
+      <div class="sistema-card-title">Sistema de Horas Paradas</div>
+      <div class="sistema-card-desc">Gestión y reportería de control de paradas de máquina.</div>
+      <div class="sistema-opciones">
+        <button class="sistema-opcion-btn" onclick="window.location.href='registrosp.html'">Registro</button>
+        <button class="sistema-opcion-btn" onclick="window.location.href='reporteria.html'">Consultas</button>
+        <button class="sistema-opcion-btn" onclick="window.location.href='programacion.html'">Programación</button>
+      </div>
+    </div>
+    <!-- Aquí puedes agregar más tarjetas para otros sistemas -->
+    <div class="sistema-card" id="cardRequerimientos">
+      <div class="sistema-card-title">Requerimientos Internos</div>
+  <div class="sistema-card-desc">Registro y reportes de requerimientos internos.</div>
+      <div class="sistema-opciones">
+        <button class="sistema-opcion-btn" onclick="window.location.href='requerimientos_v2.php'">Registro</button>
+        <button class="sistema-opcion-btn" onclick="window.location.href='requerimientos_reporte.php'">Consultas</button>
+        <a class="sistema-opcion-btn" id="btnAprobacionRequerimientos" style="display:none; background:#f1c40f; color:#000; text-align:center; text-decoration:none; padding:10px 0; border-radius:8px;" href="aprobaciones_v2.php">Aprobación Requerimientos</a>
+        <button class="sistema-opcion-btn" id="btnEntregaRequerimientos" style="display:none; background:#3498db; color:#fff; text-align:center; padding:10px 0; border-radius:8px;" onclick="window.location.href='entregasrequerimientos_v2.php'">Requerimientos - Entrega</button>
+      </div>
+    </div>
+    <!-- Nueva tarjeta: Tratamiento (visible para jparra y jsaman) -->
+    <div class="sistema-card" id="cardTratamiento" style="display:none;">
+      <div class="sistema-card-title">Tratamiento Térmico en HT-144</div>
+      <div class="sistema-card-desc">Módulo de tratamiento.</div>
+      <div class="sistema-opciones">
+        <button class="sistema-opcion-btn" onclick="window.location.href='registrotratamiento.php'">Registro</button>
+        <button class="sistema-opcion-btn" onclick="window.location.href='tratamientotermico_reporte.php'">Consultas</button>
+      </div>
+    </div>
+    <!-- Tarjeta de Mantenimiento de Accesos (solo administradores) -->
+    <div class="sistema-card" id="cardMantenimiento" style="display:none;">
+      <div class="sistema-card-title">Mantenimiento de Accesos</div>
+      <div class="sistema-card-desc">Asignar o revocar accesos y tarjetas a usuarios.</div>
+      <div class="sistema-opciones">
+        <button class="sistema-opcion-btn" onclick="window.location.href='mantenimiento_accesos.php'">Abrir Mantenimiento</button>
+      </div>
+    </div>
+  </div>
+  <!-- <script>
+    // Mostrar/ocultar opciones al hacer clic en la tarjeta
+    document.querySelectorAll('.sistema-card').forEach(card => {
+      card.addEventListener('click', function(e) {
+        if (e.target.classList.contains('sistema-opcion-btn')) return;
+        document.querySelectorAll('.sistema-card').forEach(c => c.classList.remove('active'));
+        this.classList.toggle('active');
+      });
+    });
+
+    // Cerrar sesión
+    // Cerrar sesión
+    document.getElementById('btnCerrarSesion').addEventListener('click', function() {
+      localStorage.removeItem('nombreUsuario');
+      window.location.href = 'index.html';
+    });
+  </script> -->
+
+
+
+
+  <script>
+  // Mostrar solo el usuario (antes del guion)
+  const nombreCompleto = localStorage.getItem('nombreUsuario') || '';
+  const soloUsuario = nombreCompleto.split('-')[0].trim();
+  document.getElementById('lblUsuario').textContent = soloUsuario;
+
+  // Mostrar solo el usuario (antes del guion)
+
+  // Manejo de expandir tarjeta: delegación desde el contenedor para afectar solo la tarjeta clicada
+  (function(){
+    const grid = document.querySelector('.sistemas-grid');
+    if (!grid) return;
+
+    function closeAllCards(){
+      // Quitar clase active
+      document.querySelectorAll('.sistema-card.active').forEach(c => c.classList.remove('active'));
+      // Asegurar que las opciones queden ocultas y eliminar posibles inline styles
+      document.querySelectorAll('.sistema-opciones').forEach(o => {
+        try { o.style.removeProperty('display'); } catch(_){}
+        try { o.style.setProperty('display','none','important'); } catch(_){}
+      });
+      try { grid.removeAttribute('data-active-card'); } catch(_){}
+    }
+
+    // Delegación: un sólo listener en el grid. Usar fase de captura y detener
+    // propagación para prevenir que otros handlers (librerías) cierren la tarjeta.
+    grid.addEventListener('click', function(e){
+      // Ignorar clicks sobre botones de opción
+      if (e.target && e.target.closest && e.target.closest('.sistema-opcion-btn')) return;
+
+      const card = e.target && e.target.closest && e.target.closest('.sistema-card');
+      if (!card) return;
+
+      try { if (e.stopImmediatePropagation) e.stopImmediatePropagation(); } catch(_){}
+      try { e.stopPropagation(); } catch(_){}
+
+      const wasActive = card.classList.contains('active');
+      closeAllCards();
+      // Eliminar estilos inline de display en todas las opciones y forzar solo la
+      // tarjeta clicada a mostrar sus opciones.
+      document.querySelectorAll('.sistema-opciones').forEach(o => {
+        try { o.style.removeProperty('display'); } catch(_){}
+      });
+      if (!wasActive) {
+        card.classList.add('active');
+        try {
+          const opts = card.querySelector('.sistema-opciones');
+          if (opts) opts.style.setProperty('display', 'flex', 'important');
+        } catch(_){ }
+        try { grid.setAttribute('data-active-card', card.id); } catch(_){}
+      } else {
+        try { grid.removeAttribute('data-active-card'); } catch(_){}
+      }
+    }, true); // capture phase
+
+    // Click fuera de tarjetas -> cerrar todas
+    document.addEventListener('click', function(e){
+      if (e.target && e.target.closest && e.target.closest('.sistema-card')) return;
+      closeAllCards();
+    });
+  })();
+
+  // Cerrar sesión
+  document.getElementById('btnCerrarSesion').addEventListener('click', function() {
+    localStorage.removeItem('nombreUsuario');
+    window.location.href = 'index.html';
+  });
+
+  // ===== GESTIÓN DE TURNOS =====
+  function cargarEstadoTurno() {
+    const container = document.getElementById('turnoStatusContainer');
+    const badge = document.getElementById('turnoStatusBadge');
+    const btnCerrar = document.getElementById('btnCerrarTurno');
+    const debug = document.getElementById('turnoDebug');
+
+    // Ocultar badge por defecto para evitar parpadeos; solo mostrar si el usuario está habilitado
+    container.style.display = 'none';
+    badge.textContent = '';
+    badge.className = 'turno-badge none';
+    btnCerrar.style.display = 'none';
+    debug.style.display = 'none';
+
+    // Primero confirmar sesión y usuario activo (para depuración)
+    fetch('datos.php?action=wf_obtenerUsuario', { credentials: 'same-origin' })
+      .then(res => res.json())
+      .then(userData => {
+        console.log('wf_obtenerUsuario:', userData);
+        // Ocultar/mostrar elementos según usuario
+
+        // elementos que se usan en varias ramas (definidos aquí para acceso fuera del try)
+        var cardHP = document.getElementById('cardHorasParadas');
+        var btnApr = document.getElementById('btnAprobacionRequerimientos');
+        var cardReq = document.getElementById('cardRequerimientos');
+        var cardTrat = document.getElementById('cardTratamiento');
+
+        try {
+          // Construir lista de posibles nombres de usuario desde varias fuentes
+          const fromApi = (userData && (userData.usuario || userData.nombreUsuario)) ? (userData.usuario || userData.nombreUsuario) : '';
+          const fromLocal = localStorage.getItem('nombreUsuario') || '';
+          const soloUsuarioLocal = (fromLocal.split('-')[0] || '').trim();
+          const userLower = String(fromApi || soloUsuarioLocal || fromLocal || '').toLowerCase();
+          console.log('Usuario calculado (lower):', userLower);
+
+          // Si el login devolvió una lista de features en localStorage, usarla
+          var features = [];
+          try { features = JSON.parse(localStorage.getItem('features') || '[]') || []; } catch(e) { features = []; }
+          console.log('panel: features desde localStorage:', features);
+          function hasFeature(k) { try { return features.indexOf(k) !== -1; } catch(e){ return false; } }
+
+          if (features && features.length > 0) {
+            // Mostrar u ocultar tarjetas y botones según sub-features
+            // Nota: 'maintenance_access' ya no concede visibilidad de todas las tarjetas;
+            // solo habilita la tarjeta de Mantenimiento. Las tarjetas y botones se controlan
+            // por las sub-features específicas.
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+
+            // Horas Paradas: mostrar si tiene la tarjeta general o alguna sub-feature
+            var hp_any = hasFeature('panel_horas_paradas') || hasFeature('panel_horas_paradas_registro') || hasFeature('panel_horas_paradas_consultas') || hasFeature('panel_horas_paradas_programacion');
+            if (hp_any && cardHP) {
+              cardHP.style.display = 'block';
+              try {
+                const btns = cardHP.querySelectorAll('.sistema-opcion-btn');
+                btns.forEach(btn => {
+                  const txt = (btn.textContent||'').trim().toLowerCase();
+                  if (txt.indexOf('registro') !== -1) btn.style.display = hasFeature('panel_horas_paradas_registro') || hasFeature('panel_horas_paradas') ? 'block' : 'none';
+                  else if (txt.indexOf('consultas') !== -1) btn.style.display = hasFeature('panel_horas_paradas_consultas') || hasFeature('panel_horas_paradas') ? 'block' : 'none';
+                  else if (txt.indexOf('programación') !== -1 || txt.indexOf('programacion') !== -1) btn.style.display = hasFeature('panel_horas_paradas_programacion') || hasFeature('panel_horas_paradas') ? 'block' : 'none';
+                });
+              } catch(e){}
+            }
+
+            // Requerimientos
+            var req_any = hasFeature('panel_requerimientos') || hasFeature('panel_requerimientos_registro') || hasFeature('panel_requerimientos_consultas') || hasFeature('panel_aprobacion_requerimientos');
+            if (req_any && cardReq) {
+              cardReq.style.display = 'block';
+              try {
+                const btns = cardReq.querySelectorAll('.sistema-opcion-btn');
+                btns.forEach(btn => {
+                  const txt = (btn.textContent||'').trim().toLowerCase();
+                  if (txt.indexOf('registro') !== -1) btn.style.display = hasFeature('panel_requerimientos_registro') || hasFeature('panel_requerimientos') ? 'block' : 'none';
+                  else if (txt.indexOf('consultas') !== -1) btn.style.display = hasFeature('panel_requerimientos_consultas') || hasFeature('panel_requerimientos') ? 'block' : 'none';
+                });
+                var aprBtn2 = document.getElementById('btnAprobacionRequerimientos');
+                if (aprBtn2) aprBtn2.style.display = hasFeature('panel_aprobacion_requerimientos') ? 'block' : 'none';
+                // Entrega: acepta tanto la clave nueva como la vieja 'entregas_v2' para compatibilidad
+                try {
+                  var entregaBtn = document.getElementById('btnEntregaRequerimientos');
+                  if (entregaBtn) {
+                    var entregaVisible = hasFeature('panel_requerimientos_entrega') || hasFeature('entregas_v2');
+                    entregaBtn.style.display = entregaVisible ? 'block' : 'none';
+                  }
+                } catch(e){}
+              } catch(e){}
+            }
+
+            // Tratamiento
+            var trat_any = hasFeature('panel_tratamiento') || hasFeature('panel_tratamiento_registro') || hasFeature('panel_tratamiento_consultas');
+            if (trat_any && cardTrat) {
+              cardTrat.style.display = 'block';
+              try {
+                const btns = cardTrat.querySelectorAll('.sistema-opcion-btn');
+                btns.forEach(btn => {
+                  const txt = (btn.textContent||'').trim().toLowerCase();
+                  if (txt.indexOf('registro') !== -1) btn.style.display = hasFeature('panel_tratamiento_registro') || hasFeature('panel_tratamiento') ? 'block' : 'none';
+                  else btn.style.display = hasFeature('panel_tratamiento_consultas') || hasFeature('panel_tratamiento') ? 'block' : 'none';
+                });
+              } catch(e){}
+            }
+
+            // Mostrar mantenimiento si tiene feature específica
+            try { var cardMaintNode2 = document.getElementById('cardMantenimiento'); if (hasFeature('maintenance_access') && cardMaintNode2) cardMaintNode2.style.display = 'block'; } catch(e) {}
+            // Mostrar tarjeta de mantenimiento si tiene feature
+            var cardMaint = document.getElementById('cardMantenimiento');
+            if (hasFeature('maintenance_access') && cardMaint) cardMaint.style.display = 'block';
+            // Control específico para botón de aprobación dentro de Requerimientos
+            try {
+              if (cardReq) {
+                var aprBtn = document.getElementById('btnAprobacionRequerimientos');
+                if (aprBtn) aprBtn.style.display = hasFeature('panel_aprobacion_requerimientos') ? 'block' : 'none';
+              }
+            } catch(e){}
+            // No ejecutar la lógica hardcoded por usuario
+            return;
+          }
+
+          // Usuarios aprobadores: mostrar únicamente la sección 'Requerimientos Internos'
+          const approverUsers = ['llarosa', 'jramos', 'jdelacruz'];
+          if (approverUsers.indexOf(userLower) !== -1) {
+            // ocultar todas las tarjetas y mostrar solo Requerimientos Internos
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+            if (cardReq) cardReq.style.display = 'block';
+            if (cardHP) cardHP.style.display = 'none';
+            if (btnApr) btnApr.style.display = 'block';
+
+            // En la tarjeta de Requerimientos mostrar únicamente el botón de Aprobación
+            if (cardReq) {
+              const opcionBtns = cardReq.querySelectorAll('.sistema-opcion-btn');
+              opcionBtns.forEach(btn => {
+                try {
+                  if (btn.id === 'btnAprobacionRequerimientos') {
+                    btn.style.display = 'block';
+                    btn.style.background = '#f1c40f';
+                    btn.style.color = '#000';
+                  } else {
+                    btn.style.display = 'none';
+                  }
+                } catch(e){ btn.style.display = 'none'; }
+              });
+              // No activar visualmente la tarjeta al cargar; dejar colapsada por defecto
+              try { /* mantener colapsada; no agregar class active ni cambiar display */ } catch(e) { console.warn('No se pudo procesar cardReq visual', e); }
+              console.log('Aprobador detectado, boton aprobado visible:', btnApr ? true : false);
+            }
+            return;
+          }
+
+          // Usuarios con vista limitada: mostrar sólo Horas Paradas y Requerimientos con botón 'Registro'
+          const limitedUsers = ['jmires', 'opacheco'];
+          if (limitedUsers.indexOf(userLower) !== -1) {
+            // Mostrar únicamente las tarjetas relevantes (Horas Paradas, Requerimientos) y añadir Tratamiento
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+            if (cardHP) cardHP.style.display = 'block';
+            if (cardReq) cardReq.style.display = 'block';
+            if (cardTrat) cardTrat.style.display = 'block';
+            if (btnApr) btnApr.style.display = 'none';
+
+            // En Horas Paradas mostrar únicamente el botón 'Registro'
+            if (cardHP) {
+              const opcionBtns = cardHP.querySelectorAll('.sistema-opcion-btn');
+              opcionBtns.forEach(btn => {
+                const txt = (btn.textContent || '').trim().toLowerCase();
+                const onclick = (btn.getAttribute('onclick') || '').toLowerCase();
+                if (txt === 'registro' || onclick.indexOf('registrosp.html') !== -1) btn.style.display = 'block';
+                else btn.style.display = 'none';
+              });
+            }
+
+            // En Requerimientos Internos mostrar los botones 'Registro' y 'Reporte'
+            if (cardReq) {
+              const opcionBtns = cardReq.querySelectorAll('.sistema-opcion-btn');
+              opcionBtns.forEach(btn => {
+                const txt = (btn.textContent || '').trim().toLowerCase();
+                const onclick = (btn.getAttribute('onclick') || '').toLowerCase();
+                // Permitir tanto 'registro' como 'reporte' por texto o por destino del onclick
+                if (txt === 'registro' || txt === 'reporte' || onclick.indexOf('requerimientos_v2.php') !== -1 || onclick.indexOf('requerimientos_reporte.php') !== -1) {
+                  btn.style.display = 'block';
+                } else btn.style.display = 'none';
+              });
+            }
+            // En Tratamiento mostrar ambos botones: Registro y Consultas
+            if (cardTrat) {
+              const opcionBtnsTrat = cardTrat.querySelectorAll('.sistema-opcion-btn');
+              opcionBtnsTrat.forEach(btn => {
+                try {
+                  const txt = (btn.textContent || '').trim().toLowerCase();
+                  const onclick = (btn.getAttribute('onclick') || '').toLowerCase();
+                  if (txt === 'registro' || txt === 'consultas' || onclick.indexOf('registrotratamiento.php') !== -1 || onclick.indexOf('tratamientotermico_reporte.php') !== -1) {
+                    btn.style.display = 'block';
+                  } else btn.style.display = 'none';
+                } catch(e) { btn.style.display = 'none'; }
+              });
+            }
+          } else if (userLower === 'phuaman') {
+            // PHUAMAN: mostrar solo Requerimientos Internos con botón Aprobación
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+            if (cardReq) {
+              cardReq.style.display = 'block';
+              const opcionBtns = cardReq.querySelectorAll('.sistema-opcion-btn');
+              opcionBtns.forEach(btn => {
+                try {
+                  if (btn.id === 'btnAprobacionRequerimientos') {
+                    btn.style.display = 'block';
+                    btn.style.background = '#f1c40f';
+                    btn.style.color = '#000';
+                  } else {
+                    btn.style.display = 'none';
+                  }
+                } catch(e) { btn.style.display = 'none'; }
+              });
+              try { /* mantener colapsada; no abrir opciones automáticamente */ } catch(e) {}
+            }
+            // Mostrar badge de turno y botón de cierre de turno para PHUAMAN
+            try {
+              container.style.display = 'block';
+              if (btnCerrar) btnCerrar.style.display = 'block';
+            } catch(e) {}
+          } else if (userLower === 'yabarca') {
+            // YABARCA: mostrar la tarjeta Tratamiento con 'Registro' y 'Consultas'
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+            if (cardTrat) {
+              cardTrat.style.display = 'block';
+              const opcionBtnsTrat = cardTrat.querySelectorAll('.sistema-opcion-btn');
+              opcionBtnsTrat.forEach(btn => {
+                try {
+                  btn.style.display = 'block';
+                } catch(e) { btn.style.display = 'none'; }
+              });
+            }
+          } else if (userLower === 'yvigil') {
+            // YVIGIL: mostrar Horas Paradas (solo Registro) y Tratamiento Térmico (Registro y Consultas)
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+            
+            // Mostrar tarjeta Horas Paradas con solo botón Registro
+            if (cardHP) {
+              cardHP.style.display = 'block';
+              const opcionBtnsHP = cardHP.querySelectorAll('.sistema-opcion-btn');
+              opcionBtnsHP.forEach(btn => {
+                try {
+                  const txt = (btn.textContent || '').trim().toLowerCase();
+                  const onclick = (btn.getAttribute('onclick') || '').toLowerCase();
+                  if (txt === 'registro' || onclick.indexOf('registrosp.html') !== -1) btn.style.display = 'block';
+                  else btn.style.display = 'none';
+                } catch(e) { btn.style.display = 'none'; }
+              });
+            }
+            
+            // Mostrar tarjeta Tratamiento con Registro y Consultas
+            if (cardTrat) {
+              cardTrat.style.display = 'block';
+              const opcionBtnsTrat = cardTrat.querySelectorAll('.sistema-opcion-btn');
+              opcionBtnsTrat.forEach(btn => {
+                try {
+                  btn.style.display = 'block';
+                } catch(e) { btn.style.display = 'none'; }
+              });
+            }
+          } else if (userLower === 'dflores') {
+            // DFLORES: mostrar únicamente Tratamiento Térmico con Registro y Consultas
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+            
+            if (cardTrat) {
+              cardTrat.style.display = 'block';
+              const opcionBtnsTrat = cardTrat.querySelectorAll('.sistema-opcion-btn');
+              opcionBtnsTrat.forEach(btn => {
+                try {
+                  btn.style.display = 'block';
+                } catch(e) { btn.style.display = 'none'; }
+              });
+            }
+          } else if (userLower === 'ddelacruz' || userLower === 'gmorales' || userLower === 'jmuñante' || userLower === 'gcollantes' || userLower === 'avarillas') {
+            // DDELACRUZ y grupo: mostrar la tarjeta Tratamiento y también Horas Paradas (Registro/Consultas/Programación)
+            console.log('Usuario DDELACRUZ detectado, mostrando ambas tarjetas');
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+            // Mostrar Tratamiento con botones habituales (Registro y Consultas)
+            if (cardTrat) {
+              cardTrat.style.display = 'block';
+              console.log('Tarjeta Tratamiento mostrada');
+              const opcionBtnsTrat = cardTrat.querySelectorAll('.sistema-opcion-btn');
+              opcionBtnsTrat.forEach(btn => { try { btn.style.display = 'block'; } catch(e) { btn.style.display = 'none'; } });
+            }
+            // Mostrar Horas Paradas con los tres botones visibles
+            if (cardHP) {
+              cardHP.style.display = 'block';
+              console.log('Tarjeta Horas Paradas mostrada');
+              const opcionBtnsHP = cardHP.querySelectorAll('.sistema-opcion-btn');
+              opcionBtnsHP.forEach(btn => { try { btn.style.display = 'block'; } catch(e) { btn.style.display = 'none'; } });
+            }
+          } else if (userLower === 'jsaman' || userLower === 'jparra') {
+            // JSAMAN: mostrar ambas secciones; en Horas Paradas mostrar Registro/Consultas/Programación;
+            // en Requerimientos mostrar únicamente Registro
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+            if (cardHP) {
+              cardHP.style.display = 'block';
+              const opcionBtnsHP = cardHP.querySelectorAll('.sistema-opcion-btn');
+              opcionBtnsHP.forEach(btn => { try { btn.style.display = 'block'; } catch(e){ } });
+              try { /* mantener colapsada; no abrir opciones automáticamente */ } catch(e) {}
+            }
+            if (cardReq) {
+              cardReq.style.display = 'block';
+              const opcionBtnsReq = cardReq.querySelectorAll('.sistema-opcion-btn');
+              opcionBtnsReq.forEach(btn => {
+                try {
+                  const txt = (btn.textContent || '').trim().toLowerCase();
+                  const onclick = (btn.getAttribute('onclick') || '').toLowerCase();
+                  if (txt === 'registro' || onclick.indexOf('requerimientos_v2.php') !== -1) btn.style.display = 'block';
+                  else btn.style.display = 'none';
+                } catch(e) { btn.style.display = 'none'; }
+              });
+              try { /* mantener colapsada; no abrir opciones automáticamente */ } catch(e) {}
+            }
+            // Mostrar tarjeta Tratamiento para jsaman y jparra
+            if (cardTrat) {
+              cardTrat.style.display = 'block';
+              const opcionBtnsTrat = cardTrat.querySelectorAll('.sistema-opcion-btn');
+              opcionBtnsTrat.forEach(btn => {
+                try {
+                  const txt = (btn.textContent || '').trim().toLowerCase();
+                  const onclick = (btn.getAttribute('onclick') || '').toLowerCase();
+                  if (txt === 'registro' || onclick.indexOf('tratamiento') !== -1) btn.style.display = 'block';
+                  else btn.style.display = 'none';
+                } catch(e) { btn.style.display = 'none'; }
+              });
+            }
+            // Mostrar tarjeta Mantenimiento solo para jparra
+            try { var cardMaintLegacy = document.getElementById('cardMantenimiento'); if (userLower === 'jparra' && cardMaintLegacy) cardMaintLegacy.style.display = 'block'; } catch(e) {}
+          } else {
+            // Otros usuarios: mostrar Horas Paradas y mantener Registro/Reporte visibles
+            if (cardHP) cardHP.style.display = 'block';
+            if (btnApr) btnApr.style.display = 'none';
+            if (cardReq) {
+              const opcionBtns = cardReq.querySelectorAll('.sistema-opcion-btn');
+              opcionBtns.forEach(btn => {
+                // No mostrar el botón de Aprobación para usuarios que no son aprobadores
+                if (btn.id === 'btnAprobacionRequerimientos') {
+                  btn.style.display = 'none';
+                } else {
+                  btn.style.display = 'block';
+                }
+              });
+            }
+          }
+        } catch(e) { console.error('Error procesando usuario:', e); }
+
+        // Si el usuario es 'rquicano' mostrar ambas secciones pero con botones limitados:
+        // - En 'Sistema de Horas Paradas' mostrar únicamente 'Programación'
+        // - En 'Requerimientos Internos' mostrar únicamente 'Registro'
+        if (userData && ((userData.usuario && userData.usuario.toString().toLowerCase() === 'rquicano') || (userData.nombreUsuario && userData.nombreUsuario.toString().toLowerCase().indexOf('rquicano') !== -1))) {
+          try {
+            // mostrar solo las dos tarjetas relevantes
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+            if (cardHP) cardHP.style.display = 'block';
+            if (cardReq) cardReq.style.display = 'block';
+
+            // Horas Paradas: mostrar únicamente Programación
+            if (cardHP) {
+              const opcionBtns = cardHP.querySelectorAll('.sistema-opcion-btn');
+              opcionBtns.forEach(btn => {
+                try {
+                  const txt = (btn.textContent || '').trim().toLowerCase();
+                  const onclick = (btn.getAttribute('onclick') || '').toLowerCase();
+                  if (txt === 'programación' || onclick.indexOf('programacion.html') !== -1) btn.style.display = 'block';
+                  else btn.style.display = 'none';
+                } catch(e) { btn.style.display = 'none'; }
+              });
+              try { /* mantener colapsada; no abrir opciones automáticamente */ } catch(e) {}
+            }
+
+            // Requerimientos: mostrar Registro y Reporte (para rquicano)
+            if (cardReq) {
+              const opcionBtns = cardReq.querySelectorAll('.sistema-opcion-btn');
+              opcionBtns.forEach(btn => {
+                try {
+                  const txt = (btn.textContent || '').trim().toLowerCase();
+                  const onclick = (btn.getAttribute('onclick') || '').toLowerCase();
+                  // Permitir 'registro' y 'reporte' por texto, o por destino de onclick
+                  if (txt === 'registro' || txt === 'reporte' || onclick.indexOf('requerimientos_v2.php') !== -1 || onclick.indexOf('requerimientos_reporte.php') !== -1) {
+                    btn.style.display = 'block';
+                  } else btn.style.display = 'none';
+                } catch(e) { btn.style.display = 'none'; }
+              });
+              try { /* mantener colapsada; no abrir opciones automáticamente */ } catch(e) {}
+            }
+
+            // dejar que el resto de la lógica (consulta de turno) continúe para mostrar badge y cierre si aplica
+          } catch(e) { console.error('Error procesando usuario rquicano:', e); }
+        }
+
+        if (userData && userData.error) {
+          debug.style.display = 'block';
+          debug.textContent = 'Sesión no iniciada en servidor. Por favor inicia sesión.';
+          badge.textContent = 'NO LOGIN';
+          badge.className = 'turno-badge none';
+          return;
+        }
+
+        // Ahora consultar estado del turno
+        fetch('api_turno_estado.php', { credentials: 'same-origin' })
+          .then(res => {
+            if (res.status === 401) {
+              debug.style.display = 'block';
+              debug.textContent = 'API devolvió 401 — sesión inválida.';
+              badge.textContent = 'NO LOGIN';
+              badge.className = 'turno-badge none';
+              return null;
+            }
+            return res.json();
+          })
+          .then(data => {
+            if (!data) return;
+            console.log('api_turno_estado:', data);
+            if (!data.success) {
+              debug.style.display = 'block';
+              debug.textContent = 'Error al cargar turno: ' + (data.mensaje || JSON.stringify(data));
+              badge.textContent = 'ERROR';
+              badge.className = 'turno-badge none';
+              return;
+            }
+
+            debug.style.display = 'none';
+
+            if (data.turno) {
+              const estado = data.turno.estado;
+              badge.textContent = estado === 'abierto' ? 'ABIERTO' : 'CERRADO';
+              badge.className = 'turno-badge ' + estado;
+
+              if (data.permisos && data.permisos.puede_cerrar) {
+                btnCerrar.style.display = 'block';
+              } else {
+                btnCerrar.style.display = 'none';
+              }
+            } else {
+              badge.textContent = 'SIN TURNO';
+              badge.className = 'turno-badge none';
+              btnCerrar.style.display = 'none';
+            }
+          })
+          .catch(err => {
+            console.error('Error al consultar estado del turno:', err);
+            debug.style.display = 'block';
+            debug.textContent = 'Error de red al consultar estado del turno. Ver consola.';
+            badge.textContent = 'ERROR';
+            badge.className = 'turno-badge none';
+          });
+      })
+      .catch(err => {
+        console.error('Error al consultar wf_obtenerUsuario:', err);
+        debug.style.display = 'block';
+        debug.textContent = 'Error de red al verificar sesión. Ver consola.';
+        badge.textContent = 'ERROR';
+        badge.className = 'turno-badge none';
+      });
+  }
+
+  // Observador robusto: si alguna librería intenta cambiar el display, reponer
+  // la regla de "solo la tarjeta active muestra sus opciones".
+  (function(){
+    function enforceSingleActive(){
+      var grid = document.querySelector('.sistemas-grid');
+      var activeId = grid ? grid.getAttribute('data-active-card') : null;
+      document.querySelectorAll('.sistema-card').forEach(function(c){
+        var opts = c.querySelector('.sistema-opciones');
+        if (!opts) return;
+        if (activeId && c.id === activeId){
+          try { opts.style.setProperty('display','flex','important'); } catch(_){ }
+          c.classList.add('active');
+        } else {
+          try { opts.style.removeProperty('display'); } catch(_){ }
+          try { opts.style.setProperty('display','none','important'); } catch(_){ }
+          c.classList.remove('active');
+        }
+      });
+    }
+
+    // Ejecutar al cargar
+    try { document.addEventListener('DOMContentLoaded', enforceSingleActive); } catch(_){}
+    try { window.addEventListener('load', enforceSingleActive); } catch(_){}
+
+    // Observar cambios que podrían venir de terceros y re-enforcear
+    try {
+      var grid = document.querySelector('.sistemas-grid');
+      if (grid && window.MutationObserver) {
+        var mo;
+        var _busyEnforce = false;
+        mo = new MutationObserver(function(mutations){
+          if (_busyEnforce) return;
+          _busyEnforce = true;
+          try { mo.disconnect(); } catch(_){}
+          try { enforceSingleActive(); } catch(e){ console.warn('enforce err', e); }
+          try { mo.observe(grid, { attributes: true, childList: true, subtree: true }); } catch(_){}
+          _busyEnforce = false;
+        });
+        // Observamos cambios pero nos protegemos contra reentradas desconectando mientras aplicamos cambios
+        mo.observe(grid, { attributes: true, childList: true, subtree: true });
+      }
+    } catch(e){ console.warn('observer failed', e); }
+  })();
+
+  // Manejar cierre de turno
+  document.getElementById('btnCerrarTurno').addEventListener('click', function() {
+    const motivo = prompt('Ingrese el motivo del cierre de turno (opcional):');
+    
+    if (motivo === null) {
+      return; // Usuario canceló
+    }
+
+    if (!confirm('¿Está seguro que desea cerrar el turno? Una vez cerrado, no se podrán registrar más entregas.')) {
+      return;
+    }
+
+    fetch('api_turno_cerrar.php', {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ motivo: motivo })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        alert('Turno cerrado exitosamente.');
+        cargarEstadoTurno(); // Recargar estado
+      } else {
+        alert('Error al cerrar turno: ' + data.mensaje);
+      }
+    })
+    .catch(err => {
+      alert('Error de conexión al cerrar turno.');
+      console.error(err);
+    });
+  });
+
+  // Cargar estado al iniciar
+  cargarEstadoTurno();
+  
+  // Recargar cada 30 segundos
+  setInterval(cargarEstadoTurno, 30000);
+  // Escuchar cambios en localStorage (por ejemplo desde la página de mantenimiento en otra pestaña)
+  window.addEventListener('storage', function(e){
+    if (!e) return;
+    if (e.key === 'features') {
+      try { console.log('Evento storage: features actualizado, nuevo valor:', e.newValue); } catch(e){}
+      try { cargarEstadoTurno(); } catch(e){ console.warn('No se pudo recargar estado tras storage event', e); }
+    }
+  });
+</script>
+<script>
+  // Corrección final: asegurar que el botón Cerrar Turno no sea block por estilos inline externos
+  (function(){
+    try {
+      var btn = document.querySelector('.turno-status-container .btn-cerrar-turno');
+      if (btn) {
+        btn.style.display = 'inline-block';
+        btn.style.width = 'auto';
+      }
+    } catch(e) { console.warn('Error aplicando corrección final turno button', e); }
+  })();
+</script>
+<script>
+  // Asegurar que el botón de Aprobación redirija siempre a aprobaciones_v2.php
+  // Uso de delegación para cubrir casos donde el nodo sea reemplazado dinámicamente
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest && e.target.closest('#btnAprobacionRequerimientos');
+    if (!btn) return;
+    try {
+      e.stopPropagation();
+      e.preventDefault();
+    } catch(e) {}
+    window.location.href = 'aprobaciones_v2.php';
+  });
+</script>
+<script>
+  // Refuerzo adicional: en carga, quitar onclick inline y añadir listener en fase de captura
+  document.addEventListener('DOMContentLoaded', function() {
+    try {
+      var btn = document.getElementById('btnAprobacionRequerimientos');
+      if (!btn) return;
+      // eliminar posibles atributos inline y listeners clonando nodo
+      var newBtn = btn.cloneNode(true);
+      newBtn.removeAttribute('onclick');
+      newBtn.addEventListener('click', function(evt) {
+        try { evt.stopPropagation(); evt.preventDefault(); } catch(e) {}
+        window.location.href = 'aprobaciones_v2.php';
+      }, true); // use capture to run before other handlers
+      btn.parentNode.replaceChild(newBtn, btn);
+    } catch(e) { console.warn('No se pudo reforzar btnAprobacionRequerimientos', e); }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Requerimientos - Comparación V1 vs V2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        .versions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .version-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .version-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #f0f0f0;
+        }
+        .version-badge {
+            font-size: 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+        .version-title {
+            flex: 1;
+        }
+        .version-title h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .version-title p {
+            color: #666;
+            font-size: 14px;
+        }
+        .features {
+            margin-bottom: 25px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #555;
+        }
+        .feature-icon {
+            font-size: 18px;
+            margin-top: 2px;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .btn-primary:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .btn-secondary {
+            background: #f5f5f5;
+            color: #333;
+        }
+        .btn-secondary:hover {
+            background: #e0e0e0;
+            transform: translateX(5px);
+        }
+        .comparison {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .comparison h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .comparison-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: 600;
+        }
+        .comparison-table tr:hover {
+            background: #f9f9f9;
+        }
+        .check {
+            color: #4CAF50;
+            font-size: 20px;
+        }
+        .cross {
+            color: #f44336;
+            font-size: 20px;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .status-current {
+            background: #2196F3;
+            color: white;
+        }
+        .status-new {
+            background: #4CAF50;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .versions {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 28px;
+            }
+            .comparison-table {
+                font-size: 13px;
+            }
+            .comparison-table th,
+            .comparison-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Sistema de Control de Requerimientos</h1>
+            <p>Comparación entre Versión Actual y Nueva Arquitectura</p>
+        </div>
+
+        <div class="versions">
+            <!-- Versión 1 (Actual) -->
+            <div class="version-card">
+                <div class="version-header">
+                    <div class="version-badge">V1</div>
+                    <div class="version-title">
+                        <h2>Versión Actual</h2>
+                        <p><span class="status-badge status-current">EN PRODUCCIÓN</span></p>
+                    </div>
+                </div>
+                
+                <div class="features">
+                    <h3 style="margin-bottom: 15px; color: #555;">Características:</h3>
+                    <div class="feature-item">
+                        <span class="feature-icon">📊</span>
+                        <span>Tabla única denormalizada</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✏️</span>
+                        <span>Entregas parciales básicas</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">👤</span>
+                        <span>Sin trazabilidad por usuario</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📱</span>
+                        <span>Diseño responsive implementado</span>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <a href="sistemas/requerimientos/requerimientos.php" class="btn btn-primary">
+                        <span>📋 Crear Requerimiento</span>
+                        <span>→</span>
+                    </a>
+                    <a href="sistemas/requerimientos/aprobaciones.php" class="btn btn-primary">
+                        <span>✅ Aprobaciones</span>
+                        <span>→</span>
+                    </a>
+                    <a href="sistemas/requerimientos/entregasrequerimientos.php" class="btn btn-primary">
+                        <span>📦 Entregas</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Versión 2 (Nueva) -->
+            <div class="version-card">
+                <div class="version-header">
+                    <div class="version-badge" style="background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);">V2</div>
+                    <div class="version-title">
+                        <h2>Nueva Arquitectura</h2>
+                        <p><span class="status-badge status-new">TESTING</span></p>
+                    </div>
+                </div>
+                
+                <div class="features">
+                    <h3 style="margin-bottom: 15px; color: #555;">Mejoras:</h3>
+                    <div class="feature-item">
+                        <span class="feature-icon">🗃️</span>
+                        <span>Base de datos normalizada (4 tablas + 3 vistas)</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔍</span>
+                        <span>Trazabilidad completa por montacarguista</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📈</span>
+                        <span>Historial de cada entrega individual</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span>Consultas optimizadas con vistas SQL</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔐</span>
+                        <span>Integridad referencial con FK CASCADE</span>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <a href="sistemas/requerimientos/requerimientos_v2.php" class="btn btn-primary">
+                        <span>📋 Crear Requerimiento V2</span>
+                        <span>→</span>
+                    </a>
+                    <a href="sistemas/requerimientos/aprobaciones_v2.php" class="btn btn-primary">
+                        <span>✅ Aprobaciones V2</span>
+                        <span>→</span>
+                    </a>
+                    <a href="sistemas/requerimientos/entregasrequerimientos_v2.php" class="btn btn-primary">
+                        <span>📦 Entregas V2</span>
+                        <span>→</span>
+                    </a>
+                    <a href="MIGRACION_V2_README.md" class="btn btn-secondary" target="_blank">
+                        <span>📖 Documentación</span>
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de comparación -->
+        <div class="comparison">
+            <h2>📊 Comparación Técnica</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th style="text-align: center;">V1 (Actual)</th>
+                        <th style="text-align: center;">V2 (Nueva)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Estructura de Base de Datos</strong></td>
+                        <td style="text-align: center;">1 tabla</td>
+                        <td style="text-align: center;">4 tablas + 3 vistas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trazabilidad de Entregas</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span></td>
+                        <td style="text-align: center;"><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Múltiples Montacarguistas</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span></td>
+                        <td style="text-align: center;"><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Historial de Movimientos</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span></td>
+                        <td style="text-align: center;"><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integridad Referencial</strong></td>
+                        <td style="text-align: center;"><span class="cross">✗</span></td>
+                        <td style="text-align: center;"><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diseño Mobile-First</strong></td>
+                        <td style="text-align: center;"><span class="check">✓</span></td>
+                        <td style="text-align: center;"><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Entregas Parciales</strong></td>
+                        <td style="text-align: center;"><span class="check">✓</span></td>
+                        <td style="text-align: center;"><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Consultas SQL</strong></td>
+                        <td style="text-align: center;">JOIN cada vez</td>
+                        <td style="text-align: center;">Vistas optimizadas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Auditoría de Cambios</strong></td>
+                        <td style="text-align: center;">Básica</td>
+                        <td style="text-align: center;">Completa</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Normalización</strong></td>
+                        <td style="text-align: center;">No</td>
+                        <td style="text-align: center;">Sí (3NF)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="public/panel.html" class="btn btn-secondary" style="display: inline-flex; gap: 10px;">
+                <span>← Volver al Panel Principal</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
