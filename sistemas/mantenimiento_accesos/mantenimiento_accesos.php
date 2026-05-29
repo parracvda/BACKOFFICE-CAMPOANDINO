@@ -62,7 +62,7 @@ if ($res) {
   <meta charset="utf-8" />
   <title>Mantenimiento de Accesos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="stylespanel.css">
+  <link rel="stylesheet" href="../../public/stylespanel.css">
   <style>
     body{font-family:Arial,Helvetica,sans-serif;padding:18px;background:#f6fbfb}
     .card{background:#fff;padding:18px;border-radius:10px;max-width:900px;margin:0 auto;box-shadow:0 4px 18px rgba(0,0,0,0.06)}

@@ -296,7 +296,7 @@ try {
             <div style="color:#556; font-size:13px; margin-top:6px">Registros pendientes por aprobar. Usuario: <strong style="color:#0b2a4a"><?php echo isset($_SESSION['usuarionombre'])?htmlspecialchars($_SESSION['usuarionombre']):'(no identificado)'; ?></strong></div>
         </div>
         <div style="display:flex;gap:8px;align-items:center">
-            <button class="btn-logout" onclick="location.href='logout.php'">Cerrar sesión</button>
+            <button class="btn-logout" onclick="var baseUrl = window.location.pathname.includes('/BACKOFFICE/') ? '/BACKOFFICE' : ''; location.href = baseUrl + '/logout.php';">Cerrar sesión</button>
         </div>
     </header>
     <div class="table-wrap">

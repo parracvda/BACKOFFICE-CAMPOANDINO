@@ -925,7 +925,8 @@ if (trim($usuarioNombre) === '') {
           actualizarEstadoBotonAgregarListones();
         }
         
-        showMessage('Bloque vacío eliminado automáticamente.', 'info');
+        // NO mostrar mensaje adicional aquí - el mensaje de error específico ya fue mostrado
+        // showMessage('Bloque vacío eliminado automáticamente.', 'info');
       }
     }
 
@@ -1337,15 +1338,36 @@ if (trim($usuarioNombre) === '') {
           // Detectar tipo del nuevo producto para validar límites antes de crear el bloque
           var subgrupoNuevo = detectarSubgrupoPorDescripcion(datosQR.descripcion).toUpperCase();
           var esNuevoParihuelas = subgrupoNuevo.indexOf('PARIHUELA') !== -1;
+          var esNuevoListones = subgrupoNuevo.indexOf('LISTON') !== -1;
           
           // Si es PARIHUELAS, verificar límite de 8 rumas antes de crear nuevo bloque
           if (esNuevoParihuelas) {
             var totalRumas = calcularRumasTotales();
             if (totalRumas >= 8) {
-              showMessage('No se puede agregar más productos. Ya se alcanzó el máximo de 8 rumas.', 'error');
+              showMessage('No se puede agregar otro producto. Ya se alcanzó el máximo de 8 rumas permitidas.', 'error');
               var inputCodigoActual = bloque.querySelector('.codigo-input');
               if (inputCodigoActual) inputCodigoActual.value = '';
               return;
+            }
+          }
+          
+          // Si es LISTONES, verificar capacidad del horno antes de crear nuevo bloque
+          if (esNuevoListones) {
+            // Calcular m³ del nuevo pallet
+            var medidas = extraerMedidasYCalcularM3(datosQR.descripcion);
+            if (medidas) {
+              var m3Nuevos = medidas.m3 * (parseInt(datosQR.unidades) || 0);
+              var m3Actuales = calcularM3Totales();
+              var m3TotalesConNuevo = m3Actuales + m3Nuevos;
+              
+              console.log('Validando capacidad antes de crear bloque: actual=' + m3Actuales.toFixed(2) + ' m³, nuevo=' + m3Nuevos.toFixed(2) + ' m³, total=' + m3TotalesConNuevo.toFixed(2) + ' m³');
+              
+              if (m3TotalesConNuevo > CAPACIDAD_HORNO_M3) {
+                showMessage('No se puede agregar otro producto. La capacidad del horno es de ' + CAPACIDAD_HORNO_M3 + ' m³. Con este pallet alcanzaría ' + m3TotalesConNuevo.toFixed(2) + ' m³.', 'error');
+                var inputCodigoActual = bloque.querySelector('.codigo-input');
+                if (inputCodigoActual) inputCodigoActual.value = '';
+                return;
+              }
             }
           }
           
@@ -1593,13 +1615,33 @@ if (trim($usuarioNombre) === '') {
           actualizarEstadoBotones();
           
         } else if (esTipoListones) {
-          // Para LISTONES: sumar unidades y recalcular m³
+          // Para LISTONES: validar capacidad del horno ANTES de acumular
           var campoUnidades = bloqueExistente.querySelector('.campo-cantidad-por-pallet');
+          var campoM3Unidad = bloqueExistente.querySelector('.m3-por-unidad');
           
-          if (campoUnidades) {
+          if (campoUnidades && campoM3Unidad) {
             var unidadesActuales = parseInt(campoUnidades.value) || 0;
             var nuevasUnidades = parseInt(datosQR.unidades) || 0;
+            var m3PorUnidad = parseFloat(campoM3Unidad.value) || 0;
             
+            // Calcular m³ actuales y nuevos
+            var m3Actuales = calcularM3Totales();
+            var m3Nuevos = nuevasUnidades * m3PorUnidad;
+            var m3TotalesConNuevo = m3Actuales + m3Nuevos;
+            
+            console.log('Validando capacidad LISTONES: actual=' + m3Actuales.toFixed(2) + ' m³, nuevo=' + m3Nuevos.toFixed(2) + ' m³, total=' + m3TotalesConNuevo.toFixed(2) + ' m³');
+            
+            // Verificar si excede la capacidad
+            if (m3TotalesConNuevo > CAPACIDAD_HORNO_M3) {
+              showMessage('No se puede agregar más. La capacidad del horno es de ' + CAPACIDAD_HORNO_M3 + ' m³. Con este pallet alcanzaría ' + m3TotalesConNuevo.toFixed(2) + ' m³.', 'error');
+              // NO limpiar el campo del bloque actual
+              
+              // Si el bloque fue auto-creado y falla la validación, eliminarlo
+              eliminarBloqueAutoCreado(bloque);
+              return;
+            }
+            
+            // Si está dentro de la capacidad, acumular
             campoUnidades.value = unidadesActuales + nuevasUnidades;
             
             console.log('✓ LISTONES acumulados: Unidades=' + campoUnidades.value);
@@ -2706,7 +2748,8 @@ if (trim($usuarioNombre) === '') {
       if (!b) return;
       b.addEventListener('click', function(){
         try { localStorage.removeItem('nombreUsuario'); } catch(e) {}
-        window.location.href = 'index.html';
+        var baseUrl = window.location.pathname.includes('/BACKOFFICE/') ? '/BACKOFFICE' : '';
+        window.location.href = baseUrl + '/public/index.html';
       });
     })();
   </script>

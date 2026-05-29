@@ -6,7 +6,7 @@
   <title>BACKOFFICE CAMPOANDINO</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../sistemas/horas_paradas/acceso.css">
+  <link rel="stylesheet" href="../shared/acceso.css">
 </head>
 <body>
 
@@ -19,7 +19,11 @@
     <input class="login-input" id="txtUsu" name="usuario" type="text" autocomplete="off" required v-model="usuario">
     <label class="login-label" for="txtPass">Contraseña</label>
     <input class="login-input" id="txtPass" name="password" type="password" autocomplete="off" required v-model="password">
-    <button class="login-button" type="submit" onclick="try{btnAcceder_Click();}catch(e){}">Acceder</button>
+    <button class="login-button" type="submit" onclick="try{btnAcceder_Click();}catch(e){}" aria-live="polite">
+      <span class="btn-text">Acceder</span>
+      <span class="btn-spinner" aria-hidden="true"></span>
+      <span class="btn-icon" aria-hidden="true"></span>
+    </button>
   </form>
 </div>
 
@@ -27,6 +31,6 @@
 <script src="https://cdn3.devexpress.com/jslib/22.2.6/js/jquery.min.js"></script>
 <script src="https://cdn3.devexpress.com/jslib/22.2.6/js/dx.all.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-<script src="../sistemas/horas_paradas/acceso.js"></script>
+<script src="../shared/acceso.js"></script>
 </body>
 </html>

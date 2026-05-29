@@ -563,7 +563,7 @@ try {
         </div>
         <div style="display:flex;gap:8px;align-items:center">
             <button class="btn-panel" id="btn-panel" onclick="location.href='../../public/panel.html'">Panel</button>
-            <button class="btn-logout" onclick="location.href='logout.php'">Cerrar sesión</button>
+            <button class="btn-logout" onclick="var baseUrl = window.location.pathname.includes('/BACKOFFICE/') ? '/BACKOFFICE' : ''; location.href = baseUrl + '/logout.php';">Cerrar sesión</button>
         </div>
     </header>
     <div class="table-wrap">

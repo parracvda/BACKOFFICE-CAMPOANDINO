@@ -1,0 +1,8 @@
+# Ignorar fotos subidas por los usuarios
+**/uploads/
+*.webp
+*.jpg
+*.png
+
+# Ignorar librerías de composer (si usas)
+**/vendor/

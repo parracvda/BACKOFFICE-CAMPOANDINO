@@ -3,6 +3,11 @@ session_start();
 error_log("INICIO datos.php");
 require_once __DIR__ . '/../../shared/conexion.php';
 
+// Si se llama con el parámetro action entendemos que es una petición API -> forzar JSON
+if (isset($_GET['action'])) {
+    header('Content-Type: application/json; charset=utf-8');
+}
+
 
 function obtenerDatosUsuarios($conn) {
     $sql = "SELECT * FROM produccion_lineasensamblaje";
@@ -447,16 +452,25 @@ function wf_obtenerUsuario() {
 }
 
 function wf_cerrarsesion() {
-   // Iniciar la sesión
-    //session_start();
+    // Asegurar que la sesión esté iniciada
+    if (session_status() === PHP_SESSION_NONE) session_start();
 
     // Eliminar todas las variables de sesión
-    session_unset();
+    $_SESSION = array();
+
+    // Borrar cookie de sesión si existe
+    if (ini_get('session.use_cookies')) {
+        $params = session_get_cookie_params();
+        setcookie(session_name(), '', time() - 42000,
+            $params['path'], $params['domain'], $params['secure'], $params['httponly']
+        );
+    }
 
     // Destruir la sesión
     session_destroy();
 
-    return "sesioncerrada";
+    // Devolver objeto para JSON (datos.php llamará a json_encode)
+    return array('success' => true, 'mensaje' => 'sesioncerrada');
 }
 
 try {

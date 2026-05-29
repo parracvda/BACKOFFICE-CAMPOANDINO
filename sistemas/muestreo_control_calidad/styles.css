@@ -1,0 +1,351 @@
+.dx-dropdownlist-popup-wrapper .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item-content {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.custom-item {
+  position: relative;
+  min-height: 30px;
+}
+
+.dx-dropdowneditor-input-wrapper .custom-item > img {
+  padding-left: 8px;
+}
+
+.custom-item .product-name {
+  display: inline-block;
+  padding-left: 50px;
+  text-indent: 0;
+  line-height: 30px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.custom-item > img {
+  left: 1px;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.dx-theme-material #custom-templates .dx-texteditor-buttons-container {
+  display: none;
+}
+
+.current-value {
+  padding: 10px 0;
+}
+
+.current-value > span {
+  font-weight: bold;
+}
+
+.dx-theme-material .dx-selectbox-container .product-name {
+  padding-left: 58px;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */   
+}
+
+.counter.span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: #fff;
+  font-size: 5em;
+}
+
+button {
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #162944;
+  text-transform: uppercase;
+}
+
+#titulocabecera {
+  /* background : #565656; */
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  align-content:center;
+  text-align:center;
+  font-weight: bold;
+  /* height: 80px; */
+}	
+
+/* ESTILO PARA RESUMEN EN ROJO
+#txtTotalObservaciones1 { border-color: red; }
+#txtTotalObservaciones1:focus { border-color: green !important; outline: none; } */
+
+
+
+/* ESTILO PARA TREEVIEW */
+ul, #myUL {
+  list-style-type: none;
+}
+ul, #myUL2 {
+  list-style-type: none;
+}
+ul, #myUL3 {
+  list-style-type: none;
+}
+ul, #myUL4 {
+  list-style-type: none;
+}
+ul, #myUL5 {
+  list-style-type: none;
+}
+ul, #myUL6 {
+  list-style-type: none;
+}
+ul, #myUL7 {
+  list-style-type: none;
+}
+ul, #myUL8 {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+#myUL2 {
+  margin: 0;
+  padding: 0;
+}
+#myUL3 {
+  margin: 0;
+  padding: 0;
+}
+#myUL4 {
+  margin: 0;
+  padding: 0;
+}
+#myUL5 {
+  margin: 0;
+  padding: 0;
+}
+#myUL6 {
+  margin: 0;
+  padding: 0;
+}
+#myUL7 {
+  margin: 0;
+  padding: 0;
+}
+#myUL8 {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+.caret2{
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+.caret3{
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+.caret4{
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+.caret5{
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+.caret6{
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+.caret7{
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+.caret8{
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 6px;
+}
+.caret2::before {
+  content: "\25B6";
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 6px;
+}
+.caret3::before {
+  content: "\25B6";
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 6px;
+}
+.caret4::before {
+  content: "\25B6";
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 6px;
+}
+.caret5::before {
+  content: "\25B6";
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 6px;
+}
+.caret6::before {
+  content: "\25B6";
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 6px;
+}
+.caret7::before {
+  content: "\25B6";
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 6px;
+}
+.caret8::before {
+  content: "\25B6";
+  color: #ffffff;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+.caret2-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+.caret3-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+.caret4-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+.caret5-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+.caret6-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+.caret7-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+.caret8-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+.nested2 {
+  display: none;
+}
+.nested3 {
+  display: none;
+}
+.nested4 {
+  display: none;
+}
+.nested5 {
+  display: none;
+}
+.nested6 {
+  display: none;
+}
+.nested7 {
+  display: none;
+}
+.nested8 {
+  display: none;
+}
+
+.active {
+  display: block;
+} 
+.active2 {
+  display: block;
+}
+.active3 {
+  display: block;
+}
+.active4 {
+  display: block;
+}
+.active5 {
+  display: block;
+}
+.active6 {
+  display: block;
+}
+.active7 {
+  display: block;
+}
+.active8 {
+  display: block;
+}
+
+
+/* NO ACTUALIZAR PAGINA AL DESLIZAR */
+body {
+  overscroll-behavior: contain;
+}
+
+
+

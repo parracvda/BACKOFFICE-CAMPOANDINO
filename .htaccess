@@ -1,0 +1,46 @@
+# Protección y redirección mínima para un deployment dentro de public_html
+# Evita listar directorios
+Options -Indexes
+
+# Denegar acceso directo a carpetas sensibles por URL
+RewriteEngine On
+
+# Permitir acceso a archivos PHP específicos dentro de shared/ (login y diagnóstico)
+RewriteCond %{REQUEST_URI} ^/shared/(acceso|diagnostico)\.php [NC]
+RewriteRule .* - [L]
+
+# Bloquear el resto de archivos PHP dentro de shared/
+RewriteCond %{REQUEST_URI} ^/shared/.*\.php$ [NC]
+RewriteRule .* - [F,L]
+# Bloquear backup/ y backups generados automáticamente
+RewriteRule ^_backup_pre_reorg_ - [F,L]
+# Bloquear accesos a carpetas de desarrollo / control de versiones
+RewriteRule ^\.git(/|$) - [F,L]
+
+# Denegar acceso a ficheros sensibles
+<IfModule mod_authz_core.c>
+  <FilesMatch "(\.env|composer\.json|composer\.lock)">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "(\.env|composer\.json|composer\.lock)">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
+
+# Redirigir la raíz a public/index.html si no se proporciona ruta
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /public/index.html [L,R=302]
+
+# Evitar ejecución de PHP en carpetas sensibles (otra capa de protección)
+RewriteCond %{REQUEST_URI} ^/(_backup_pre_reorg_|\.git|node_modules) [NC]
+RewriteRule .* - [F,L]
+
+# Denegar acceso a archivos .env / composer por seguridad
+<IfModule mod_authz_core.c>
+  <FilesMatch "(\.env|composer\.json|composer\.lock)">
+    Require all denied
+  </FilesMatch>
+</IfModule>

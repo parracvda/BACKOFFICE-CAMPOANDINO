@@ -1,0 +1,40 @@
+/* estilos.css - Control de Activos
+   Estilos compartidos entre todas las páginas del módulo */
+
+/* Badges de estado */
+.badge-estado {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+.badge-OPERATIVO           { background: #d4edda; color: #155724; }
+.badge-EN_MANTENIMIENTO    { background: #fff3cd; color: #856404; }
+.badge-INOPERATIVO         { background: #f8d7da; color: #721c24; }
+.badge-DE_BAJA             { background: #e2e3e5; color: #383d41; }
+
+/* Badges para checklist */
+.badge-OK        { background: #d4edda; color: #155724; }
+.badge-OBSERVADO { background: #fff3cd; color: #856404; }
+.badge-MALO      { background: #f8d7da; color: #721c24; }
+.badge-N-A       { background: #e2e3e5; color: #383d41; }
+.badge-N\/A      { background: #e2e3e5; color: #383d41; }
+
+/* Badges para mantenimiento */
+.badge-PROGRAMADO    { background: #cce5ff; color: #004085; }
+.badge-EN_EJECUCION  { background: #fff3cd; color: #856404; }
+.badge-COMPLETADO    { background: #d4edda; color: #155724; }
+.badge-CANCELADO     { background: #f8d7da; color: #721c24; }
+
+/* Badges tipo activo */
+.badge-CAMION     { background: #e8f4fd; color: #0c5460; }
+.badge-CAMIONETA  { background: #d1ecf1; color: #0c5460; }
+.badge-MONTACARGA { background: #fef3cd; color: #856404; }
+.badge-STOCKA     { background: #f0e6ff; color: #5b2c8f; }
+.badge-OTRO       { background: #e2e3e5; color: #383d41; }
+
+/* Estado general checklist */
+.badge-BUENO   { background: #d4edda; color: #155724; }
+.badge-REGULAR { background: #fff3cd; color: #856404; }
+.badge-MALO    { background: #f8d7da; color: #721c24; }

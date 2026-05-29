@@ -21,6 +21,39 @@
     { key: 'panel_tratamiento_registro', label: 'Tratamiento - Registro' },
     { key: 'panel_tratamiento_consultas', label: 'Tratamiento - Consultas' },
 
+    // Control de Calidad (card + sub-features)
+    { key: 'panel_control_calidad', label: 'Control de Calidad (toda la tarjeta)' },
+    { key: 'panel_control_calidad_registro', label: 'Control de Calidad - Registro' },
+    
+    // Trazabilidad (card + sub-features)
+    { key: 'panel_trazabilidad', label: 'Trazabilidad (toda la tarjeta)' },
+    { key: 'panel_trazabilidad_consultas', label: 'Trazabilidad - Consultas' },
+    
+    // Despachos (nueva tarjeta)
+    { key: 'panel_despachos', label: 'Despachos (toda la tarjeta)' },
+    { key: 'panel_despachos_registro', label: 'Despachos - Registro' },
+    { key: 'panel_despachos_consultas', label: 'Despachos - Consultas' },
+
+    // Movimiento de equipos TI
+    { key: 'panel_movimiento_ti', label: 'Movimiento de equipos TI (toda la tarjeta)' },
+    { key: 'panel_movimiento_ti_inventario', label: 'Movimiento TI - Inventario equipos' },
+    { key: 'panel_movimiento_ti_registro', label: 'Movimiento TI - Registro movimiento' },
+
+    // Muestreo Control de Calidad
+    { key: 'panel_muestreo_cc', label: 'Muestreo Control de Calidad (toda la tarjeta)' },
+    { key: 'panel_muestreo_cc_registro', label: 'Muestreo CC - Registro' },
+    { key: 'panel_muestreo_cc_consultas', label: 'Muestreo CC - Consultas' },
+    { key: 'panel_muestreo_cc_tablas', label: 'Muestreo CC - Tablas' },
+    { key: 'panel_muestreo_cc_importar', label: 'Muestreo CC - Importar Productos' },
+
+    // Control de Activos
+    { key: 'panel_control_activos', label: 'Control de Activos (toda la tarjeta)' },
+    { key: 'panel_control_activos_maestro', label: 'Control Activos - Maestro' },
+    { key: 'panel_control_activos_checklist', label: 'Control Activos - Checklist Diario' },
+    { key: 'panel_control_activos_mantenimiento', label: 'Control Activos - Mantenimientos' },
+    { key: 'panel_control_activos_operadores', label: 'Control Activos - Operadores' },
+    { key: 'panel_control_activos_alertas', label: 'Control Activos - Alertas de Mantenimiento' },
+
     { key: 'maintenance_access', label: 'Acceso a Mantenimiento (maintenance_access)' }
   ];
 
@@ -28,7 +61,13 @@
   const parentMap = {
     'panel_horas_paradas': ['panel_horas_paradas_registro','panel_horas_paradas_consultas','panel_horas_paradas_programacion'],
     'panel_requerimientos': ['panel_requerimientos_registro','panel_requerimientos_consultas','panel_aprobacion_requerimientos','panel_requerimientos_entrega'],
-    'panel_tratamiento': ['panel_tratamiento_registro','panel_tratamiento_consultas']
+    'panel_tratamiento': ['panel_tratamiento_registro','panel_tratamiento_consultas'],
+    'panel_control_calidad': ['panel_control_calidad_registro']
+    , 'panel_trazabilidad': ['panel_trazabilidad_consultas']
+    , 'panel_despachos': ['panel_despachos_registro','panel_despachos_consultas']
+    , 'panel_movimiento_ti': ['panel_movimiento_ti_inventario','panel_movimiento_ti_registro']
+    , 'panel_muestreo_cc': ['panel_muestreo_cc_registro','panel_muestreo_cc_consultas','panel_muestreo_cc_tablas','panel_muestreo_cc_importar']
+    , 'panel_control_activos': ['panel_control_activos_maestro','panel_control_activos_checklist','panel_control_activos_mantenimiento','panel_control_activos_alertas','panel_control_activos_operadores']
   };
 
   // Invertir map para buscar padre desde hijo

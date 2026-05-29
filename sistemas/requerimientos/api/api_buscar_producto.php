@@ -20,15 +20,15 @@ $likeCualquiera = "%" . $q . "%";  // Para producto: buscar en cualquier parte
 try {
   // Buscar en stock_materiales por código (al inicio) o por producto (cualquier parte)
   // Agrupar por Codigo para obtener datos únicos (usar MAX para producto ya que puede variar)
-  $sql = "SELECT Codigo, 
-          MAX(Producto) as Descripcion,
-          SUM(Cantidad) as Cantidad, 
-          COUNT(DISTINCT Id) as Pallets,
-          MAX(Observacion) as Observacion
-          FROM stock_materiales 
-          WHERE Codigo LIKE ? OR Producto LIKE ?
-          GROUP BY Codigo
-          LIMIT 50";
+      $sql = "SELECT Codigo, 
+        MAX(Producto) as Descripcion,
+        SUM(Cantidad) as Cantidad, 
+        COUNT(DISTINCT Id) as Pallets,
+        MAX(Observacion) as Observacion
+        FROM stock_materiales 
+        WHERE (Codigo LIKE ? OR Producto LIKE ?) AND UPPER(Ubicacion) NOT IN ('MP','PAMPA')
+        GROUP BY Codigo
+        LIMIT 50";
   
   if ($stmt = $conn->prepare($sql)) {
     $stmt->bind_param('ss', $likeInicio, $likeCualquiera);

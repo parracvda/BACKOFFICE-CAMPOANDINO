@@ -218,6 +218,12 @@
     .sistemas-grid[data-active-card="cardHorasParadas"] #cardHorasParadas .sistema-opciones,
     .sistemas-grid[data-active-card="cardRequerimientos"] #cardRequerimientos .sistema-opciones,
     .sistemas-grid[data-active-card="cardTratamiento"] #cardTratamiento .sistema-opciones,
+    .sistemas-grid[data-active-card="cardControlCalidad"] #cardControlCalidad .sistema-opciones,
+    .sistemas-grid[data-active-card="cardTrazabilidad"] #cardTrazabilidad .sistema-opciones,
+    .sistemas-grid[data-active-card="cardDespachos"] #cardDespachos .sistema-opciones,
+    .sistemas-grid[data-active-card="cardMovimientoTI"] #cardMovimientoTI .sistema-opciones,
+    .sistemas-grid[data-active-card="cardMuestreoCC"] #cardMuestreoCC .sistema-opciones,
+    .sistemas-grid[data-active-card="cardControlActivos"] #cardControlActivos .sistema-opciones,
     .sistemas-grid[data-active-card="cardMantenimiento"] #cardMantenimiento .sistema-opciones {
       display: flex !important;
     }
@@ -345,7 +351,7 @@
       </div>
     </div>
     <!-- Aquí puedes agregar más tarjetas para otros sistemas -->
-    <div class="sistema-card" id="cardRequerimientos">
+    <div class="sistema-card" id="cardRequerimientos" style="display:none;">
       <div class="sistema-card-title">Requerimientos Internos</div>
   <div class="sistema-card-desc">Registro y reportes de requerimientos internos.</div>
       <div class="sistema-opciones">
@@ -364,14 +370,69 @@
         <button class="sistema-opcion-btn" onclick="window.location.href='../sistemas/horno_termico/tratamientotermico_reporte.php'">Consultas</button>
       </div>
     </div>
-    <!-- Tarjeta de Mantenimiento de Accesos (solo administradores) -->
-    <div class="sistema-card" id="cardMantenimiento" style="display:none;">
-      <div class="sistema-card-title">Mantenimiento de Accesos</div>
-      <div class="sistema-card-desc">Asignar o revocar accesos y tarjetas a usuarios.</div>
+    <!-- Nueva tarjeta: Verificación Control de Calidad -->
+    <div class="sistema-card" id="cardControlCalidad" style="display:none;">
+      <div class="sistema-card-title">Verificación Control de Calidad</div>
+      <div class="sistema-card-desc">Sistema de muestreo y verificación de control de calidad.</div>
       <div class="sistema-opciones">
-        <button class="sistema-opcion-btn" onclick="window.location.href='../sistemas/mantenimiento_accesos/mantenimiento_accesos.php'">Abrir Mantenimiento</button>
+        <button class="sistema-opcion-btn" onclick="window.location.href='../sistemas/muestreo_control_calidad/menu.html'">Registro</button>
       </div>
     </div>
+      <!-- Nueva tarjeta: Trazabilidad -->
+      <div class="sistema-card" id="cardTrazabilidad" style="display:none;">
+        <div class="sistema-card-title">Trazabilidad</div>
+        <div class="sistema-card-desc">Consultas y seguimiento de trazabilidad.</div>
+        <div class="sistema-opciones">
+          <button class="sistema-opcion-btn" id="btnTrazabilidadConsultar" onclick="window.location.href='../sistemas/trazabilidad/consultas.php'">Consultar</button>
+        </div>
+      </div>
+
+      <!-- Tarjeta de Mantenimiento de Accesos (solo administradores) -->
+        <!-- Nueva tarjeta: Despachos -->
+        <div class="sistema-card" id="cardDespachos" style="display:none;">
+          <div class="sistema-card-title">Despachos</div>
+          <div class="sistema-card-desc">Registro de despachos y seguimiento.</div>
+          <div class="sistema-opciones">
+            <button class="sistema-opcion-btn" onclick="window.location.href='../sistemas/despachos/registro.php'">Registrar</button>
+            <button class="sistema-opcion-btn" onclick="window.location.href='../sistemas/despachos/consultas.php'">Consultas</button>
+          </div>
+        </div>
+
+      <!-- Tarjeta: Movimiento de equipos TI -->
+      <div class="sistema-card" id="cardMovimientoTI" style="display:none;">
+        <div class="sistema-card-title">Movimiento de equipos TI</div>
+        <div class="sistema-card-desc">Gestión de inventario y movimiento de equipos de tecnología.</div>
+        <div class="sistema-opciones">
+          <button class="sistema-opcion-btn" id="btnMovTIInventario" onclick="window.location.href='../sistemas/movimiento_ti/inventario.php'">Inventario equipos</button>
+          <button class="sistema-opcion-btn" id="btnMovTIRegistro" onclick="window.location.href='../sistemas/movimiento_ti/registro_movimiento.php'">Registro movimiento</button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Muestreo Control de Calidad -->
+      <div class="sistema-card" id="cardMuestreoCC" style="display:none;">
+        <div class="sistema-card-title">Muestreo Control de Calidad</div>
+        <div class="sistema-card-desc">Registro y consulta de muestreos de control de calidad.</div>
+        <div class="sistema-opciones">
+          <button class="sistema-opcion-btn" id="btnMuestreoCCTablas" onclick="window.location.href='../sistemas/muestreo_cc/tablas.php'">Tablas</button>
+          <button class="sistema-opcion-btn" id="btnMuestreoCCRegistro" onclick="window.location.href='../sistemas/muestreo_cc/registro.php'">Registro</button>
+          <button class="sistema-opcion-btn" id="btnMuestreoCCConsultas" onclick="window.location.href='../sistemas/muestreo_cc/consultas.php'">Consultas</button>
+          <button class="sistema-opcion-btn" id="btnMuestreoCCImportar" onclick="window.location.href='../sistemas/muestreo_cc/importar_productos.php'">Importar Productos</button>
+        </div>
+      </div>
+
+      <!-- Tarjeta: Control de Activos -->
+      <div class="sistema-card" id="cardControlActivos" style="display:none; cursor:pointer;" data-href="../sistemas/control_activos/launcher.php">
+        <div class="sistema-card-title">Control de Activos</div>
+        <div class="sistema-card-desc">Gestión de activos móviles, checklist diario y operadores de cadena de suministros.</div>
+      </div>
+
+      <div class="sistema-card" id="cardMantenimiento" style="display:none;">
+        <div class="sistema-card-title">Mantenimiento de Accesos</div>
+        <div class="sistema-card-desc">Asignar o revocar accesos y tarjetas a usuarios.</div>
+        <div class="sistema-opciones">
+          <button class="sistema-opcion-btn" onclick="window.location.href='../sistemas/mantenimiento_accesos/mantenimiento_accesos.php'">Abrir Mantenimiento</button>
+        </div>
+      </div>
   </div>
   <!-- <script>
     // Mostrar/ocultar opciones al hacer clic en la tarjeta
@@ -429,6 +490,13 @@
 
       try { if (e.stopImmediatePropagation) e.stopImmediatePropagation(); } catch(_){}
       try { e.stopPropagation(); } catch(_){}
+
+      // Si la tarjeta tiene data-href, redirigir directamente (sin opciones)
+      var href = card.getAttribute('data-href');
+      if (href) {
+        window.location.href = href;
+        return;
+      }
 
       const wasActive = card.classList.contains('active');
       closeAllCards();
@@ -489,6 +557,7 @@
         var btnApr = document.getElementById('btnAprobacionRequerimientos');
         var cardReq = document.getElementById('cardRequerimientos');
         var cardTrat = document.getElementById('cardTratamiento');
+        var cardDesp = document.getElementById('cardDespachos');
 
         try {
           // Construir lista de posibles nombres de usuario desde varias fuentes
@@ -504,6 +573,14 @@
           console.log('panel: features desde localStorage:', features);
           function hasFeature(k) { try { return features.indexOf(k) !== -1; } catch(e){ return false; } }
 
+          // Si el usuario NO tiene features asignados, ocultar todas las tarjetas y terminar
+          if (!features || features.length === 0) {
+            console.log('Usuario sin features asignados - ocultando todas las tarjetas');
+            document.querySelectorAll('.sistema-card').forEach(c => c.style.display = 'none');
+            return;
+          }
+
+          // Si tiene features, mostrar tarjetas y botones según features asignados
           if (features && features.length > 0) {
             // Mostrar u ocultar tarjetas y botones según sub-features
             // Nota: 'maintenance_access' ya no concede visibilidad de todas las tarjetas;
@@ -563,6 +640,94 @@
                 });
               } catch(e){}
             }
+
+            // Trazabilidad
+            try {
+              var cardTraz = document.getElementById('cardTrazabilidad');
+              var traz_any = hasFeature('panel_trazabilidad') || hasFeature('panel_trazabilidad_consultas');
+              if (traz_any && cardTraz) {
+                cardTraz.style.display = 'block';
+                try {
+                  var btnTraz = document.getElementById('btnTrazabilidadConsultar');
+                  if (btnTraz) btnTraz.style.display = hasFeature('panel_trazabilidad_consultas') || hasFeature('panel_trazabilidad') ? 'block' : 'none';
+                } catch(e){}
+              }
+            } catch(e){}
+
+            // Control de Calidad
+            var cardCC = document.getElementById('cardControlCalidad');
+            var cc_any = hasFeature('panel_control_calidad') || hasFeature('panel_control_calidad_registro');
+            if (cc_any && cardCC) {
+              cardCC.style.display = 'block';
+              try {
+                const btns = cardCC.querySelectorAll('.sistema-opcion-btn');
+                btns.forEach(btn => {
+                  const txt = (btn.textContent||'').trim().toLowerCase();
+                  if (txt.indexOf('registro') !== -1) btn.style.display = hasFeature('panel_control_calidad_registro') || hasFeature('panel_control_calidad') ? 'block' : 'none';
+                });
+              } catch(e){}
+            }
+
+            // Despachos
+            try {
+              var desp_any = hasFeature('panel_despachos') || hasFeature('panel_despachos_registro');
+              if (desp_any && cardDesp) {
+                cardDesp.style.display = 'block';
+                try {
+                  const btns = cardDesp.querySelectorAll('.sistema-opcion-btn');
+                  btns.forEach(btn => {
+                    const txt = (btn.textContent||'').trim().toLowerCase();
+                    if (txt.indexOf('registro') !== -1) {
+                      btn.style.display = hasFeature('panel_despachos_registro') || hasFeature('panel_despachos') ? 'block' : 'none';
+                    } else if (txt.indexOf('consult') !== -1 || txt.indexOf('consultar') !== -1) {
+                      btn.style.display = hasFeature('panel_despachos_consultas') || hasFeature('panel_despachos') ? 'block' : 'none';
+                    } else {
+                      btn.style.display = hasFeature('panel_despachos') ? 'block' : 'none';
+                    }
+                  });
+                } catch(e){}
+              }
+            } catch(e){}
+
+            // Movimiento de equipos TI
+            try {
+              var cardMovTI = document.getElementById('cardMovimientoTI');
+              var movti_any = hasFeature('panel_movimiento_ti') || hasFeature('panel_movimiento_ti_inventario') || hasFeature('panel_movimiento_ti_registro');
+              if (movti_any && cardMovTI) {
+                cardMovTI.style.display = 'block';
+                try {
+                  var btnInv = document.getElementById('btnMovTIInventario');
+                  if (btnInv) btnInv.style.display = hasFeature('panel_movimiento_ti_inventario') || hasFeature('panel_movimiento_ti') ? 'block' : 'none';
+                  var btnReg = document.getElementById('btnMovTIRegistro');
+                  if (btnReg) btnReg.style.display = hasFeature('panel_movimiento_ti_registro') || hasFeature('panel_movimiento_ti') ? 'block' : 'none';
+                } catch(e){}
+              }
+            } catch(e){}
+
+            // Muestreo Control de Calidad
+            try {
+              var cardMCC = document.getElementById('cardMuestreoCC');
+              var mcc_any = hasFeature('panel_muestreo_cc') || hasFeature('panel_muestreo_cc_registro') || hasFeature('panel_muestreo_cc_consultas') || hasFeature('panel_muestreo_cc_tablas') || hasFeature('panel_muestreo_cc_importar');
+              if (mcc_any && cardMCC) {
+                cardMCC.style.display = 'block';
+                var btnMCCTablas = document.getElementById('btnMuestreoCCTablas');
+                var btnMCCReg = document.getElementById('btnMuestreoCCRegistro');
+                var btnMCCCons = document.getElementById('btnMuestreoCCConsultas');
+                var btnMCCImp = document.getElementById('btnMuestreoCCImportar');
+                if (btnMCCTablas) btnMCCTablas.style.display = hasFeature('panel_muestreo_cc_tablas') || hasFeature('panel_muestreo_cc') ? 'block' : 'none';
+                if (btnMCCReg) btnMCCReg.style.display = hasFeature('panel_muestreo_cc_registro') || hasFeature('panel_muestreo_cc') ? 'block' : 'none';
+                if (btnMCCCons) btnMCCCons.style.display = hasFeature('panel_muestreo_cc_consultas') || hasFeature('panel_muestreo_cc') ? 'block' : 'none';
+                if (btnMCCImp) btnMCCImp.style.display = hasFeature('panel_muestreo_cc_importar') || hasFeature('panel_muestreo_cc') ? 'block' : 'none';
+              }
+            } catch(e){}
+
+            // Control de Activos
+            try {
+              var cardCA = document.getElementById('cardControlActivos');
+              if (hasFeature('panel_control_activos') && cardCA) {
+                cardCA.style.display = 'block';
+              }
+            } catch(e){}
 
             // Mostrar mantenimiento si tiene feature específica
             try { var cardMaintNode2 = document.getElementById('cardMantenimiento'); if (hasFeature('maintenance_access') && cardMaintNode2) cardMaintNode2.style.display = 'block'; } catch(e) {}

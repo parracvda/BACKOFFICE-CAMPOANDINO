@@ -48,7 +48,8 @@ $(() => {
           success(data) {
               
               console.log("logout",data)
-              window.location.href = 'index.html?par_accion=agregar&id=0';
+              var baseUrl = window.location.pathname.includes('/BACKOFFICE/') ? '/BACKOFFICE' : '';
+              window.location.href = baseUrl + '/public/index.html';
           },
           error(e) {             
                   console.error('Error logout:', e);

@@ -1,0 +1,513 @@
+[24-Sep-2024 13:10:35 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[24-Sep-2024 13:10:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[24-Sep-2024 13:10:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[24-Sep-2024 13:10:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[24-Sep-2024 13:10:35 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[24-Sep-2024 13:10:35 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[28-Nov-2024 14:53:15 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 14:53:28 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 15:33:06 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 23
+[28-Nov-2024 15:33:06 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 23
+[28-Nov-2024 15:44:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 15:48:06 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 15:48:06 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 15:59:05 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 15:59:05 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 15:59:14 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 15:59:14 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:03:30 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:03:30 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:03:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:39 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:11:39 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:11:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:41 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:41 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:41 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:11:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:34 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:34 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:34 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:51 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:12:51 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:12:51 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:51 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:51 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:51 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:12:57 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:15 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:15 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:16 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:16 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:19 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:42 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:13:42 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:13:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:39 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:39 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:14:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:17:12 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 16:17:12 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 16:22:12 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[28-Nov-2024 16:22:26 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:22:57 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:22:57 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:22:57 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:23:19 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:24:32 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 16:24:32 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 16:24:41 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:24:41 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 10
+[28-Nov-2024 16:24:41 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:24:51 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[28-Nov-2024 16:24:51 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 16:24:51 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 16:27:44 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 16:27:44 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 16:32:29 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 16:32:29 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 16
+[28-Nov-2024 16:32:45 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 23
+[28-Nov-2024 16:32:45 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 23
+[29-Nov-2024 15:20:13 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[29-Nov-2024 15:27:18 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[29-Nov-2024 15:35:22 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[29-Nov-2024 16:16:51 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:16:59 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:16:59 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:17:00 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:17:24 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:17:33 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:17:53 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:17:54 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:17:54 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:17:54 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:17:55 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:18:19 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:18:20 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:18:21 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:18:21 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:18:46 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:19:20 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:19:21 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:19:21 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:19:21 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:19:36 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:19:55 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:20:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:20:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:20:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:20:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:21:15 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:21:15 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:21:15 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:21:16 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:21:16 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:46:13 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:48 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:50 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:50 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:50 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:51 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:51 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:51 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:51 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:52 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:52 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:48:52 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:06 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:06 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:12 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:12 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:12 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:13 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:13 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:13 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:13 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:13 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:14 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:17 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:49:18 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:50:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:52:00 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:52:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:52:12 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:52:13 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:52:13 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:53:47 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:53:48 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:38 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:39 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:39 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:40 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:41 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:41 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:41 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:41 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:42 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:42 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:42 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:44 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:44 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:45 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:46 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:46 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:46 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:46 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:47 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:47 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:47 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:47 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:48 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:48 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:48 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 16:59:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:36 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:36 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:36 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:36 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:36 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:37 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:37 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:37 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:37 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:37 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:38 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:38 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:00:38 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:01:28 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:01:29 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:47 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:47 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:47 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:47 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:48 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:48 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:48 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:48 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:48 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:49 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:02:50 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:05:58 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:05:58 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:05:58 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:05:58 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:05:58 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:06:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:06:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:06:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:06:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:06:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:06:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:06 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:06 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:06 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:06 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:09 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:10 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:11 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:12 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:14 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:14 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:14 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:16 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:16 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:17 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:17 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:17 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:17 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:17 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:18 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:18 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:18 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:18 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:24 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:24 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:24 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:41 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:43 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:44 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[29-Nov-2024 17:11:44 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'campoand_admin'@'201.148.104.204' to database 'campoand_campoandino' in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[30-Nov-2024 08:18:12 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[30-Nov-2024 08:18:39 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 23
+[30-Nov-2024 08:18:39 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 23
+[30-Nov-2024 08:18:42 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[30-Nov-2024 08:20:08 America/Lima] PHP Notice:  Undefined variable: pdo in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 23
+[30-Nov-2024 08:20:08 America/Lima] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php:23
+Stack trace:
+#0 {main}
+  thrown in /home/campoand/public_html/sig.campoandino-apps.com/get_data.php on line 23
+[30-Nov-2024 08:20:14 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[30-Nov-2024 08:20:34 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[30-Nov-2024 08:43:22 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[30-Nov-2024 08:43:22 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[30-Nov-2024 08:43:22 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[30-Nov-2024 08:43:22 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[30-Nov-2024 08:43:29 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[30-Nov-2024 08:43:30 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[30-Nov-2024 09:44:16 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[30-Nov-2024 12:58:21 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[02-Dec-2024 16:57:54 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[02-Dec-2024 17:08:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[02-Dec-2024 17:10:13 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[02-Dec-2024 17:10:34 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[02-Dec-2024 17:10:34 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[02-Dec-2024 17:10:35 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[02-Dec-2024 17:10:35 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[02-Dec-2024 17:10:35 America/Lima] PHP Warning:  mysqli::__construct(): (08004/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[03-Dec-2024 14:15:28 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:15:31 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:18:17 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:18:20 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:19:02 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:04 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:20:05 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:20:05 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:20:06 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:20:06 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:20:06 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:20:06 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:20:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:20:28 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/acceso.php on line 9
+[03-Dec-2024 14:20:30 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:20:32 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:07 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[03-Dec-2024 14:21:08 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_pt.php on line 10
+[26-Dec-2024 16:07:16 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[09-Jan-2025 09:38:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[09-Jan-2025 09:38:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[09-Jan-2025 09:38:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[09-Jan-2025 09:38:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[09-Jan-2025 09:38:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[09-Jan-2025 09:38:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[09-Jan-2025 09:38:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[09-Jan-2025 09:38:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[09-Jan-2025 09:38:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[09-Jan-2025 09:38:01 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos.php on line 10
+[09-Jan-2025 10:05:34 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[09-Jan-2025 10:05:35 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[09-Jan-2025 10:08:57 America/Lima] PHP Warning:  mysqli::__construct(): (HY000/1040): Too many connections in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 10
+[28-Jan-2025 11:43:14 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 11:49:56 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 11:50:40 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 11:50:57 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 11:54:38 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 11:55:13 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 11:57:38 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 11:58:37 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 11:59:50 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 12:06:48 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 12:09:10 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 12:09:15 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131
+[28-Jan-2025 13:03:19 America/Lima] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/campoand/public_html/sig.campoandino-apps.com/datos_de.php on line 131

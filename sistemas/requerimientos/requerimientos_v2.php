@@ -1407,14 +1407,16 @@ if (!empty($correlativo)) {
 		var btnCerrarSesionReq = document.getElementById('btnCerrarSesionReq');
 		if (btnCerrarSesionReq) {
 			btnCerrarSesionReq.addEventListener('click', function(){
-				fetch('logout.php', { method: 'POST', headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+				fetch('/logout.php', { method: 'POST', headers: { 'X-Requested-With': 'XMLHttpRequest' } })
 				.then(function(resp){
 					try { localStorage.removeItem('nombreUsuario'); } catch(e){}
-					window.location.href = 'index.html';
+					var baseUrl = window.location.pathname.includes('/BACKOFFICE/') ? '/BACKOFFICE' : '';
+					window.location.href = baseUrl + '/public/index.html';
 				}).catch(function(err){
 					console.error('Error logout:', err);
 					try { localStorage.removeItem('nombreUsuario'); } catch(e){}
-					window.location.href = 'index.html';
+					var baseUrl = window.location.pathname.includes('/BACKOFFICE/') ? '/BACKOFFICE' : '';
+					window.location.href = baseUrl + '/public/index.html';
 				});
 			});
 		}

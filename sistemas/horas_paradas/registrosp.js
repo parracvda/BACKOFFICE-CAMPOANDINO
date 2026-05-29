@@ -725,7 +725,9 @@ $(() => {
               console.log("logout",data)
               localStorage.removeItem('idUsuario');
               localStorage.removeItem('nombreUsuario');
-              window.location.href = 'index.html?par_accion=agregar&id=0';
+              // Detectar si estamos en /BACKOFFICE/ (local) o en raíz (hosting)
+              var baseUrl = window.location.pathname.includes('/BACKOFFICE/') ? '/BACKOFFICE' : '';
+              window.location.href = baseUrl + '/public/index.html';
           },
           error(e) {             
                   console.error('Error logout:', e);
@@ -1482,10 +1484,12 @@ $(() => {
         dataType: 'json',
         success(data) {
            
-            console.log("logout",data)
-            localStorage.removeItem('idUsuario');
-            localStorage.removeItem('nombreUsuario');
-            window.location.href = 'index.html?par_accion=agregar&id=0'; 
+              console.log("logout",data)
+              localStorage.removeItem('idUsuario');
+              localStorage.removeItem('nombreUsuario');
+              // Detectar si estamos en /BACKOFFICE/ (local) o en raíz (hosting)
+              var baseUrl = window.location.pathname.includes('/BACKOFFICE/') ? '/BACKOFFICE' : '';
+              window.location.href = baseUrl + '/public/index.html'; 
         },
         error(e) {             
                 console.error('Error logout:', e);

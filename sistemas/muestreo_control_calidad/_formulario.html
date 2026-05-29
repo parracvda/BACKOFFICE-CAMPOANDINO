@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+
+    <title>FORMULARIO</title>     
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="formulario.js"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/22.2.5/css/dx.darkmoon.css" />
+     <!-- <script src="https://cdn3.devexpress.com/jslib/22.2.5/js/dx.all.js"></script>  -->
+    <!-- <link rel="stylesheet" type="text/css" href="dx.darkmoon.css" /> -->
+    <script src="dx.all.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+  </head>
+  <body class="dx-viewport"> 
+
+    <!-- cabecera para el titulo -->
+    <header id="main-header">		
+      <p id="titulocabecera" > VERIFICACIÓN DE CONTROL DE LA CALIDAD - MP </p>
+    </header>
+    
+    <!-- seccion botones -->
+    <div class="button-container">         
+      <div id="btnAceptar"></div>           
+      <div id="btnRegistros"></div> 
+      <div id="btnCerrarSesion"></div>      
+    </div>
+
+    <div class="demo-container">
+      <br>
+      <div id="tabPanel"></div>
+
+      <div id="div_tab_01">
+        <div id="form">
+      
+          <div class="dx-fieldset">
+          <fieldset style="border: 1px solid rgb(34, 204, 175)">
+
+              <div class="dx-field">
+                <div class="dx-field-label">Sede:</div>
+                <div class="dx-field-value">
+                  <div id="cmbSede"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Fecha Registro:</div>
+                <div class="dx-field-value">
+                  <div id="dpFecha"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Hora:</div>
+                <div class="dx-field-value">
+                  <div id="tpHora"></div>
+                </div>
+              </div>
+      
+              <div class="dx-field">
+                <div class="dx-field-label">Tipo Registro:</div>
+                <div class="dx-field-value">
+                  <div id="cmbTipoRegistro"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Procedencia:</div>
+                <div class="dx-field-value">
+                  <div id="cmbProcedencia"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Proveedor:</div>
+                <div class="dx-field-value">
+                  <div id="cmbProveedor"></div>
+                </div>
+              </div>  
+         
+            </fieldset>
+          </div>
+
+        </div>     
+      </div>                
+
+      <div id="div_tab_02">
+        <div id="form_02">
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">
+              <legend>Documentación</legend>
+  
+              <div class="dx-field">
+                <div class="dx-field-label">Guía Remsión:</div>
+                <div class="dx-field-value">
+                  <div id="txtGuiaRemision"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Guía Transportista:</div>
+                <div class="dx-field-value">
+                  <div id="txtGuiaTransportista"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">N° Placa:</div>
+                <div class="dx-field-value">
+                  <div id="txtPlaca"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Total Paquetes:</div>
+                <div class="dx-field-value">
+                  <div id="txtTotalPaquetes"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">N° Contenedor:</div>
+                <div class="dx-field-value">
+                  <div id="txtContenedor"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">N° Precinto:</div>
+                <div class="dx-field-value">
+                  <div id="txtPrecinto"></div>
+                </div>
+              </div>
+
+
+              <div class="dx-field">
+              <div class="dx-field-label">Orden de Compra:</div>
+              <div class="dx-field-value">
+              <div id="cmbOrdenCompra"></div>
+              </div>
+              </div>
+        
+              <div class="dx-field">
+              <div class="dx-field-label">Descripción de Material:</div>
+              <div class="dx-field-value">
+              <div id="cmbDescripcionMaterial"></div>
+              </div>
+              </div>
+        
+              <div class="dx-field">
+              <div class="dx-field-label">Código de Material:</div>
+              <div class="dx-field-value">
+              <div id="cmbCodigoMaterial"></div>
+              </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">
+              <legend>Inspección</legend>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Paredes:</div>
+                <div class="dx-field-value">
+                  <div id="cmbParedes"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Techo:</div>
+                <div class="dx-field-value">
+                  <div id="cmbTecho"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Puerta:</div>
+                <div class="dx-field-value">
+                  <div id="cmbPuerta"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Plataforma:</div>
+                <div class="dx-field-value">
+                  <div id="cmbPlataforma"></div>
+                </div>
+              </div>  
+          
+            </fieldset>
+          </div>
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">
+
+              <div class="dx-field">
+                <div class="dx-field-label">Condición de Transporte:</div>
+                <div class="dx-field-value">
+                  <div id="txtCondicionTransporte"></div>
+                </div>
+              </div>
+  
+            </fieldset>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="div_tab_03">
+        <div id="form_03">
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">         
+
+              <div class="dx-field">
+                <div class="dx-field-label">Tipo de Material:</div>
+                <div class="dx-field-value">
+                  <div id="cmbTipoMaterial"></div>
+                </div>
+              </div>
+              
+              <div class="dx-field">
+                <div class="dx-field-label">Documentación:</div>
+                <div class="dx-field-value">
+                  <div id="cmbDocumentacion"></div>
+                </div>
+              </div>
+
+            </fieldset>
+          </div> 
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 2px solid rgb(34, 204, 175)">         
+              <legend>Documentos</legend>
+              <br>
+
+              <div id="div_chk1" class="dx-field">
+                FICHA TÉCNICA: <input type="checkbox" id="chk1" value="FICHA TECNICA" onclick="myFunction()">           
+              </div>
+              <div id="div_chk2" class="dx-field">
+                HOJA DE SEGURIDAD: <input type="checkbox" id="chk2" value="HOJA DE SEGURIDAD" onclick="myFunction()">            
+              </div>
+              <div id="div_chk3" class="dx-field"> 
+                CERTIFICADO DE CALIDAD: <input type="checkbox" id="chk3" value="CERTIFICADO DE CALIDAD" onclick="myFunction()">
+              </div>
+              <div id="div_chk4" class="dx-field"> 
+                CERTIFICADO DE ORIGEN: <input type="checkbox" id="chk4" value="CERTIFICADO DE ORIGEN" onclick="myFunction()">
+              </div>
+              <div id="div_chk5" class="dx-field"> 
+                CERTIFICADO FITOSANITARIO: <input type="checkbox" id="chk5" value="CERTIFICADO FITOSANITARIO" onclick="myFunction()">
+              </div>
+              <div id="div_chk6" class="dx-field"> 
+                CERTIFICADO FSC: <input type="checkbox" id="chk6" value="CERTIFICADO FSC" onclick="myFunction()">
+              </div>
+              <div id="div_chk7" class="dx-field"> 
+                PACKING LIST: <input type="checkbox" id="chk7" value="PACKING LIST" onclick="myFunction()">
+              </div>
+              <div id="div_chk8" class="dx-field"> 
+                CERTIFICADO DE ANÁLISIS DE METALES PESADOS: <input type="checkbox" id="chk8" value="CERTIFICADO DE ANALISIS DE METALES PESADOS" onclick="myFunction()">
+              </div>
+              <div id="div_chk9" class="dx-field"> 
+                CERTIFICADO NO USO DE POLÍMEROS CLORINADOS, NO USO DE BISPHENOL A: <input type="checkbox" id="chk9" value="CERTIFICADO NO USO DE POLIMEROS CLORINADOS, NO USO DE BISPHENOL A" onclick="myFunction()">
+              </div>
+              <div id="div_chk10" class="dx-field"> 
+                CERTIFICADO DE INOCUIDAD DE LAS TINTAS: <input type="checkbox" id="chk10" value="CERTIFICADO DE INOCUIDAD DE LAS TINTAS" onclick="myFunction()">
+              </div>
+              <div id="div_chk11" class="dx-field"> 
+                CERTIFICADO DE CALIBRACIÓN: <input type="checkbox" id="chk11" value="CERTIFICADO DE CALIBRACION" onclick="myFunction()">
+              </div>
+              <div id="div_chk12" class="dx-field"> 
+                CERTIFICADO DE CONTROL DE PLAGAS: <input type="checkbox" id="chk12" value="CERTIFICADO DE CONTROL DE PLAGAS" onclick="myFunction()">
+              </div>
+              <div id="div_chk13" class="dx-field"> 
+                TRATAMIENTO TÉRMICO: <input type="checkbox" id="chk13" value="TRATAMIENTO TERMICO" onclick="myFunction()">
+              </div>
+              <div id="div_chk14" class="dx-field"> 
+                CERTIFICADO MICROBIOLÓGICO: <input type="checkbox" id="chk14" value="CERTIFICADO MICROBIOLOGICO" onclick="myFunction()">
+              </div>
+              <div id="div_chk15" class="dx-field"> 
+                CERTIFICADO FISICOQUÍMICO: <input type="checkbox" id="chk15" value="CERTIFICADO FISICOQUIMICO" onclick="myFunction()">
+              </div>
+              <div id="div_chk16" class="dx-field"> 
+                CERTIFICADO GFSI: <input type="checkbox" id="chk16" value="CERTIFICADO GFSI" onclick="myFunction()">
+              </div>
+
+            </fieldset>
+          </div>         
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">         
+  
+              <div class="dx-field">
+                <div class="dx-field-label">Observación:</div>
+                <div class="dx-field-value">
+                  <div id="txtObservacion"></div>
+                </div>
+              </div>
+
+            </fieldset>
+          </div> 
+                   
+        </div>
+      </div>
+
+      <div id="div_tab_04" type="text/html">
+        <div id="form_04">
+        
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">
+
+              <div class="dx-field">
+                <div class="dx-field-label">Cantidad de Muestra:</div>
+                <div class="dx-field-value">
+                  <div id="txtCantidadMuestra"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Observación:</div>
+                <div class="dx-field-value">
+                  <div id="cmbObservacion" onclick="habilitarInput"></div>
+                </div>
+              </div>
+
+              <div class="dx-field">
+                <div class="dx-field-label">Característica:</div>
+                <div class="dx-field-value">
+                  <div id="cmbCaracteristica" onclick="habilitarInput"></div>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">
+              <legend>Medición</legend>
+
+              <div class="dx-field" id="grupo_ancho">
+                <div class="dx-field-label">Ancho:</div>   
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtAncho"></div>
+                      <div id="txtDetalleAncho"></div>
+                      <div id="lblUnidadesAncho">mm</div>
+                      <div id="txtPorcentajeAncho"></div>
+                    </div>
+                  </div>
+                </div>    
+
+              <div class="dx-field" id="grupo_largo">
+                <div class="dx-field-label">Largo:</div>   
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtLargo"></div>
+                      <div id="txtDetalleLargo"></div>
+                      <div id="lblUnidadesLargo">mm</div>
+                      <div id="txtPorcentajeLargo"></div>
+                    </div>
+                  </div>
+                </div>    
+          
+              <div class="dx-field" id="grupo_espesor">
+                <div class="dx-field-label">Espesor:</div>   
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtEspesor"></div>
+                      <div id="txtDetalleEspesor"></div>
+                      <div id="lblUnidadesEspesor">mm</div>
+                      <div id="txtPorcentajeEspesor"></div>
+                    </div>
+                  </div>
+                </div>   
+                
+                <div class="dx-field" id="grupo_peso">
+                  <div class="dx-field-label">Peso:</div>   
+                    <div class="dx-field-value">
+                      <div class="button-container"> 
+                        <div id="txtPeso"></div>
+                        <div id="txtDetallePeso"></div>
+                        <div id="lblUnidadesPeso">kg</div>
+                        <div id="txtPorcentajePeso"></div>
+                      </div>
+                    </div>
+                  </div>    
+
+                  <div class="dx-field" id="grupo_humedad">
+                    <div class="dx-field-label">Humedad:</div>   
+                      <div class="dx-field-value">
+                        <div class="button-container"> 
+                          <div id="txtHumedad"></div>
+                          <div id="txtDetalleHumedad"></div>
+                          <div id="lblUnidadesHumedad">%</div>
+                          <div id="txtPorcentajeHumedad"></div>
+                        </div>
+                      </div>
+                    </div>    
+                  
+            </fieldset>
+          </div>
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">
+              <legend>Defectos</legend>
+
+              <div class="dx-field" id="grupo_oxidacion">           
+                <div class="dx-field-label">Oxidación:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtOxidacion"></div>
+                      <div id="txtPorcentajeOxidacion"></div>
+                  </div>
+                </div>
+              </div>
+                                      
+              <div class="dx-field" id="grupo_norecubrimiento">  
+                <div class="dx-field-label">No Recubrimiento:</div>   
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtNoRecubrimiento"></div>
+                      <div id="txtPorcentajeNoRecubrimiento"></div>                  
+                  </div>
+                </div>
+              </div>  
+
+              <div class="dx-field" id="grupo_color">           
+                <div class="dx-field-label">Color:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtColor"></div>
+                      <div id="txtPorcentajeColor"></div>
+                    </div>
+                  </div>
+                </div>              
+
+              <div class="dx-field" id="grupo_adhesivo">           
+                <div class="dx-field-label">Adhesivo:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtAdhesivo"></div>
+                      <div id="txtPorcentajeAdhesivo"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_nudos">           
+                <div class="dx-field-label">Nudos:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtNudos"></div>
+                      <div id="txtPorcentajeNudos"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_medula">           
+                <div class="dx-field-label">Médula:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtMedula"></div>
+                      <div id="txtPorcentajeMedula"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_grietas">           
+                <div class="dx-field-label">Grietas:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtGrietas"></div>
+                      <div id="txtPorcentajeGrietas"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_arqueado">           
+                <div class="dx-field-label">Arqueado:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtArqueado"></div>
+                      <div id="txtPorcentajeArqueado"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_dañoinsectos">           
+                <div class="dx-field-label">Daño por Insectos:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtDañoInsectos"></div>
+                      <div id="txtPorcentajeDañoInsectos"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_astillado">           
+                <div class="dx-field-label">Astillado:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtAstillado"></div>
+                      <div id="txtPorcentajeAstillado"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_desnivelcorte">           
+                <div class="dx-field-label">Desnivel de Corte(No Cuadratura):</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtDesnivelCorte"></div>
+                      <div id="txtPorcentajeDesnivelCorte"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_superficieraspada">           
+                <div class="dx-field-label">Superficie Raspada:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtSuperficieRaspada"></div>
+                      <div id="txtPorcentajeSuperficieRaspada"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_resina">           
+                <div class="dx-field-label">Resina:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtResina"></div>
+                      <div id="txtPorcentajeResina"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_huecosyvacios">           
+                <div class="dx-field-label">Huecos y Vacíos:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtHuecosYVacios"></div>
+                      <div id="txtPorcentajeHuecosYVacios"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_superficierugosa">           
+                <div class="dx-field-label">Superficie Rugosa:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtSuperficieRugosa"></div>
+                      <div id="txtPorcentajeSuperficieRugosa"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_desprendimientocapas">           
+                <div class="dx-field-label">Desprendimiento de Capas:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtDesprendimientoCapas"></div>
+                      <div id="txtPorcentajeDesprendimientoCapas"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_rasgados">           
+                <div class="dx-field-label">Rasgados:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtRasgados"></div>
+                      <div id="txtPorcentajeRasgados"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_perforacion">           
+                <div class="dx-field-label">Perforación:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtPerforacion"></div>
+                      <div id="txtPorcentajePerforacion"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_malaimpresion">           
+                <div class="dx-field-label">Mala Impresión:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtMalaImpresion"></div>
+                      <div id="txtPorcentajeMalaImpresion"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_nocolor">           
+                <div class="dx-field-label">No Color:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtNoColor"></div>
+                      <div id="txtPorcentajeNoColor"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_nouv">           
+                <div class="dx-field-label">No UV:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtNoUV"></div>
+                      <div id="txtPorcentajeNoUV"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_problemassecado">           
+                <div class="dx-field-label">Problemas de Secado:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtProblemasSecado"></div>
+                      <div id="txtPorcentajeProblemasSecado"></div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="dx-field" id="grupo_marcarodillo">           
+                <div class="dx-field-label">Marca de Rodillo:</div> 
+                  <div class="dx-field-value">
+                    <div class="button-container"> 
+                      <div id="txtMarcaRodillo"></div>
+                      <div id="txtPorcentajeMarcaRodillo"></div>
+                    </div>
+                  </div>
+                </div>
+     
+            </fieldset>
+          </div>
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">
+              <legend>Peligros</legend>
+
+              <ul id="myUL">
+                <li><span class="caret">PELIGROS FÍSICOS</span>
+                  <ul class="nested">
+                    <br>
+                    <li><div class="button-container"><label for="muestreo_lbl1">METAL/ACERO</label><input type="checkbox" id="muestreo_chk1" onclick="myFunction()"><div id="muestreo_txt1"></div><div id="muestreo_txt1_porcentaje"></div></div></li>
+                    <br>
+                    <li><div class="button-container"><label for="muestreo_lbl2">INSECTOS</label><input type="checkbox" id="muestreo_chk2" onclick="myFunction()"><div id="muestreo_txt2"></div><div id="muestreo_txt2_porcentaje"></div></div></li>
+                    <br>
+                    <li><div class="button-container"><label for="muestreo_lbl3">PIEDRAS</label><input type="checkbox" id="muestreo_chk3" onclick="myFunction()"><div id="muestreo_txt3"></div><div id="muestreo_txt3_porcentaje"></div></div></li>
+                    <br>
+                    <li><div class="button-container"><label for="muestreo_lbl4">RAMAS</label><input type="checkbox" id="muestreo_chk4" onclick="myFunction()"><div id="muestreo_txt4"></div><div id="muestreo_txt4_porcentaje"></div></div></li>
+                    <br>
+                    <li><div class="button-container"><label for="muestreo_lbl5">OXIDO</label><input type="checkbox" id="muestreo_chk5" onclick="myFunction()"><div id="muestreo_txt5"></div><div id="muestreo_txt5_porcentaje"></div></div></li>
+                    <br>
+                    <li><div class="button-container"><label for="muestreo_lbl6">EPPS</label><input type="checkbox" id="muestreo_chk6" onclick="myFunction()"><div id="muestreo_txt6"></div><div id="muestreo_txt6_porcentaje"></div></div></li>   
+                    <br>   
+                  </ul>
+                </li>
+                <li><span class="caret">PELIGROS QUÍMICOS</span>
+                  <ul class="nested">
+                    <br>  
+                    <li><div class="button-container"><label for="muestreo_lbl7">PINTURAS</label><input type="checkbox" id="muestreo_chk7" onclick="myFunction()"><div id="muestreo_txt7"></div><div id="muestreo_txt7_porcentaje"></div></div></li> 
+                    <br>  
+                    <li><div class="button-container"><label for="muestreo_lbl8">LUBRICANTES</label><input type="checkbox" id="muestreo_chk8" onclick="myFunction()"><div id="muestreo_txt8"></div><div id="muestreo_txt8_porcentaje"></div></div></li> 
+                    <br>           
+                  </ul>
+                </li>
+                <li><span class="caret">PELIGROS MICROBIOLÓGICOS</span>
+                  <ul class="nested">
+                    <br>  
+                    <li><div class="button-container"><label for="muestreo_lbl9">HONGOS</label><input type="checkbox" id="muestreo_chk9" onclick="myFunction()"><div id="muestreo_txt9"></div><div id="muestreo_txt9_porcentaje"></div></div></li> 
+                    <br>  
+                    <li><div class="button-container"><label for="muestreo_lbl10">MOHO</label><input type="checkbox" id="muestreo_chk10" onclick="myFunction()"><div id="muestreo_txt10"></div><div id="muestreo_txt10_porcentaje"></div></div></li> 
+                    <br>  
+                    <li><div class="button-container"><label for="muestreo_lbl11">HECES DE ANIMALES</label><input type="checkbox" id="muestreo_chk11" onclick="myFunction()"><div id="muestreo_txt11"></div><div id="muestreo_txt11_porcentaje"></div></div></li> 
+                    <br>  
+                    <li><div class="button-container"><label for="muestreo_lbl12">SANGRE</label><input type="checkbox" id="muestreo_chk12" onclick="myFunction()"><div id="muestreo_txt12"></div><div id="muestreo_txt12_porcentaje"></div></div></li>
+                    <br>          
+                  </ul>
+                </li>
+                <li><span class="caret">CONTAMINACIÓN MAL INTENCIONADA</span>
+                  <ul class="nested">
+                    <br>  
+                    <li><div class="button-container">SI<input type="radio" id="muestreo_rdb1" name="grupo" onclick="myFunction()"><div id="muestreo_txt16"></div></div></li>
+                    <br>  
+                    <li>NO <input type="radio" id="muestreo_rdb2" name="grupo" onclick="myFunction()"></li> 
+                    <br>             
+                  </ul>
+                </li>
+                <li><span class="caret">ALÉRGENOS</span>
+                  <ul class="nested">
+                    <br>  
+                    <li><div class="button-container"><label for="muestreo_lbl13">FRUTOS</label><input type="checkbox" id="muestreo_chk13" onclick="myFunction()"><div id="muestreo_txt13"></div><div id="muestreo_txt13_porcentaje"></div></div></li> 
+                    <br>     
+                    <li><div class="button-container"><label for="muestreo_lbl14">HUEVOS</label><input type="checkbox" id="muestreo_chk14" onclick="myFunction()"><div id="muestreo_txt14"></div><div id="muestreo_txt14_porcentaje"></div></div></li>    
+                    <br>  
+                    <li><div class="button-container"><label for="muestreo_lbl15">VEGETALES</label><input type="checkbox" id="muestreo_chk15" onclick="myFunction()"><div id="muestreo_txt15"></div><div id="muestreo_txt15_porcentaje"></div></div></li> 
+                    <br>   
+                    <li><div class="button-container"><label for="muestreo_lbl17">PRODUCTOS AZUCARADOS</label><input type="checkbox" id="muestreo_chk17" onclick="myFunction()"><div id="muestreo_txt17"></div><div id="muestreo_txt17_porcentaje"></div></div></li> 
+                    <br>   
+                    <li><div class="button-container"><label for="muestreo_lbl18">SALSAS</label><input type="checkbox" id="muestreo_chk18" onclick="myFunction()"><div id="muestreo_txt18"></div><div id="muestreo_txt18_porcentaje"></div></div></li> 
+                    <br>              
+                  </ul>
+                </li>
+              </ul>
+
+              <!-- TREEVIEW -->
+              <script type="text/javascript">           
+                var toggler = document.getElementsByClassName("caret");
+                var i;               
+                for (i = 0; i < toggler.length; i++) {
+                  toggler[i].addEventListener("click", function() {
+                    this.parentElement.querySelector(".nested").classList.toggle("active");
+                    this.classList.toggle("caret-down");
+                  });
+                }
+              </script>
+                                  
+            </fieldset>
+          </div>
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">
+              <legend>Resumen</legend>
+             
+              <div class="button-container"> 
+                <div id="lblTotalObservaciones">Q Observaciones</div>
+                <div id="txtTotalObservaciones"></div>
+                <div id="lblPorcentajeTotalObservaciones">% Observaciones</div>
+                <div id="txtPorcentajeTotalObservaciones"></div>
+              </div>
+                    
+            </fieldset>
+          </div>
+       
+        </div>
+      </div>
+    
+      <div id="div_tab_05" type="text/html">
+        <div id="form_05">
+
+          <div class="dx-fieldset">
+            <fieldset style="border: 1px solid rgb(34, 204, 175)">
+
+              <button id="boton">Capturar Evidencia</button>
+              <select name="listaDeDispositivos" id="listaDeDispositivos"></select>
+              <p id="estado"></p>
+        
+              <br>
+              <video muted="muted" id="video"></video>
+              <canvas id="canvas" style="display: none;"></canvas>
+            
+              <input id="fileToUpload" type="file" name="fileToUpload" /> 
+              <button id="upload-button" onclick="uploadFile()">Subir Foto o Video</button>
+
+
+              <script>
+
+              var files = document.getElementById('fileToUpload').files;
+              for (var x = 0; x < files.length; x++) {
+                  fd.append("fileToUpload[]", document.getElementById('fileToUpload').files[x]);
+              }
+
+              </script>
+
+          </fieldset>
+        </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <div id="lblUsuario"></div>
+
+  </body>
+</html>
